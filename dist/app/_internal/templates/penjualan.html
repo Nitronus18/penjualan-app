@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+
+{% block title %}Riwayat Penjualan{% endblock %}
+
+{% block content %}
+{% if filter_tanggal is not defined %}
+  {% set filter_tanggal = '' %}
+{% endif %}
+
+<h2 class="mb-4 fw-bold">🧾 Riwayat Penjualan</h2>
+
+<!-- Filter Form -->
+<form method="GET" class="row g-3 align-items-end mb-4">
+  <div class="col-md-3">
+    <label for="tanggal" class="form-label">Filter Tanggal</label>
+    <input type="date" id="tanggal" name="tanggal" class="form-control" value="{{ filter_tanggal }}">
+  </div>
+  <div class="col-md-3">
+    <label for="kategori" class="form-label">Filter Kategori</label>
+    <select name="kategori" id="kategori" class="form-select">
+      <option value="semua" {% if filter_kategori == 'semua' %}selected{% endif %}>Semua Kategori</option>
+      <option value="coklat" {% if filter_kategori == 'coklat' %}selected{% endif %}>🍫 Chocolate</option>
+      <option value="fruit" {% if filter_kategori == 'fruit' %}selected{% endif %}>🍓 Fruit</option>
+      <option value="spesial" {% if filter_kategori == 'spesial' %}selected{% endif %}>🌟 Spesial</option>
+      <option value="coffee" {% if filter_kategori == 'coffee' %}selected{% endif %}>☕ Coffee</option>
+      <option value="gotea" {% if filter_kategori == 'gotea' %}selected{% endif %}>🥤 gotea</option>
+     <option value="EsTeh" {% if filter_kategori == 'EsTeh' %}selected{% endif %}>🥤 EsTeh</option>
+    </select>
+  </div>
+  <div class="col-md-3 d-flex gap-2">
+    <button class="btn btn-primary w-100 mt-2"><i class="bi bi-search"></i> Filter</button>
+    <a href="/penjualan" class="btn btn-outline-secondary w-100 mt-2"><i class="bi bi-x-circle"></i> Reset</a>
+  </div>
+</form>
+
+<!-- Ekspor Excel dengan filter -->
+<form method="get" action="/export/penjualan-ringkas-xlsx" class="row g-2 align-items-end mt-2">
+  <input type="hidden" name="tanggal" value="{{ filter_tanggal or '' }}">
+
+  <div class="col-auto">
+    <label class="form-label">Mode Export</label>
+    <select name="mode" class="form-select form-select-sm">
+      <option value="harian" {% if request.args.get('mode') == 'harian' %}selected{% endif %}>Per Hari</option>
+      <option value="mingguan" {% if request.args.get('mode') == 'mingguan' %}selected{% endif %}>Per Minggu</option>
+      <option value="bulanan" {% if request.args.get('mode') == 'bulanan' %}selected{% endif %}>Per Bulan</option>
+    </select>
+  </div>
+
+  <div class="col-auto">
+    <label class="form-label d-block">&nbsp;</label>
+    <button type="submit" class="btn btn-success btn-sm rounded-pill px-3">
+      <i class="bi bi-file-earmark-excel"></i> Ekspor Excel Goklat & EsTeh
+    </button>
+  </div>
+</form>
+
+
+<!-- Export Button -->
+
+
+<a href="/export/penjualan-ringkas" class="btn btn-outline-success mb-3 rounded-pill px-4">
+  <i class="bi bi-file-earmark-arrow-down"></i> Ekspor (Goklat & EsTeh)
+</a>
+
+
+
+<!-- Table Penjualan -->
+<div class="table-responsive">
+  <table class="table table-hover align-middle table-bordered">
+    <thead class="table-light">
+      <tr class="text-center">
+        <th style="width: 150px;">Tanggal</th>
+        <th>Nama Produk</th>
+        <th>Jumlah</th>
+        <th>Total</th>
+        <th>Kategori</th>
+        <th style="width: 80px;">Aksi</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for p in penjualan %}
+      <tr>
+        <td>{{ p.tanggal }}</td>
+        <td>{{ p.nama }}</td>
+        <td class="text-center">{{ p.jumlah }}</td>
+        <td>{{ (p.jumlah * p.harga) | rupiah }}</td>
+        <td>{{ p.kategori|capitalize }}</td>
+        <td class="text-center">
+          <form action="/hapus-penjualan/{{ p.id }}" method="POST" onsubmit="return confirm('Hapus transaksi ini?')">
+            <button class="btn btn-sm btn-outline-danger rounded-circle" title="Hapus">
+              🗑️
+            </button>
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<!-- Total -->
+<div class="alert alert-info mt-4 rounded-3 shadow-sm">
+  <strong>Total Pemasukan:</strong> {{ total|rupiah }}
+</div>
+
+<div class="alert alert-success rounded-3 mt-3">
+  <h5 class="mb-2">🔍 Rincian Total Penjualan</h5>
+  <ul class="mb-0">
+    <li><strong>Goklat:</strong> {{ total_goklat | rupiah }}</li>
+    <li><strong>EsTeh:</strong> {{ total_esteh | rupiah }}</li>
+  </ul>
+</div>
+
+{% endblock %}

@@ -1,0 +1,56 @@
+chRequestType(requestType);
+    };
+    NetworkRule.prototype.matchMethod = function (method) {
+        if (!method || !MethodModifier.isHTTPMethod(method)) {
+            return false;
+        }
+        var permittedMethods = this.getPermittedMethods();
+        if (permittedMethods === null || permittedMethods === void 0 ? void 0 : permittedMethods.includes(method)) {
+            return true;
+        }
+        var restrictedMethods = this.getRestrictedMethods();
+        return !!restrictedMethods && !restrictedMethods.includes(method);
+    };
+    NetworkRule.prototype.matchResponseHeaders = function (responseHeadersItems) {
+        if (!responseHeadersItems || responseHeadersItems.length === 0) {
+            return false;
+        }
+        var ruleData = this.getHeaderModifierValue();
+        if (!ruleData) {
+            return false;
+        }
+        var ruleHeaderName = ruleData.header, ruleHeaderValue = ruleData.value;
+        return responseHeadersItems.some(function (responseHeadersItem) {
+            var responseHeaderName = responseHeadersItem.name, responseHeaderValue = responseHeadersItem.value;
+            if (ruleHeaderName.toLowerCase() !== responseHeaderName.toLowerCase()) {
+                return false;
+            }
+            if (ruleHeaderValue === null) {
+                return true;
+            }
+            if (typeof ruleHeaderValue === 'string') {
+                return ruleHeaderValue === responseHeaderValue;
+            }
+            if (responseHeaderValue && ruleHeaderValue instanceof RegExp) {
+                return ruleHeaderValue.test(responseHeaderValue);
+            }
+            return false;
+        });
+    };
+    NetworkRule.isTooGeneral = function (node) {
+        var _a, _b;
+        return !((_b = (_a = node.modifiers) === null || _a === void 0 ? void 0 : _a.children) === null || _b === void 0 ? void 0 : _b.length) && node.pattern.value.length < 4;
+    };
+    NetworkRule.prototype.loadOptions = function (options) {
+        for (var _i = 0, _a = options.children; _i < _a.length; _i++) {
+            var option = _a[_i];
+            var value = EMPTY_STRING;
+            if (option.value && option.value.value) {
+                value = option.value.value;
+            }
+            this.loadOption(option.name.value, value, option.exception);
+            this.usedOptionNames.add(option.name.value);
+        }
+        this.validateOptions();
+    };
+    NetworkRule.prototype.hasOption = fu

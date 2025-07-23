@@ -1,0 +1,41 @@
+dexedNetworkRuleWithHash = function (filterId, lineIndex, ruleConvertedToAGSyntax) {
+        var networkRule;
+        try {
+            networkRule = RuleFactory.createRule(ruleConvertedToAGSyntax, filterId, lineIndex, false,
+            true,
+            true,
+            false);
+        }
+        catch (e) {
+            throw new Error("Cannot create IRule from filter \"".concat(filterId, "\" and byte offset \"").concat(lineIndex, "\": ").concat(getErrorMessage$2(e)));
+        }
+        if (networkRule === null) {
+            return null;
+        }
+        if (!(networkRule instanceof NetworkRule)) {
+            throw new Error("Rule from filter \"".concat(filterId, "\" and line \"").concat(lineIndex, "\" is not network rule: ").concat(networkRule));
+        }
+        var hash = IndexedNetworkRuleWithHash.createRuleHash(networkRule);
+        var indexedNetworkRuleWithHash = new IndexedNetworkRuleWithHash(networkRule, lineIndex, hash);
+        if (!indexedNetworkRuleWithHash) {
+            throw new Error("Cannot create indexed network rule with hash from filter \"".concat(filterId, "\" and line \"").concat(lineIndex, "\""));
+        }
+        return indexedNetworkRuleWithHash;
+    };
+    IndexedNetworkRuleWithHash.createFromNode = function (filterId, lineIndex, node) {
+        var rulesConvertedToAGSyntax;
+        try {
+            var conversionResult = RuleConverter.convertToAdg(node);
+            if (conversionResult.isConverted) {
+                rulesConvertedToAGSyntax = conversionResult.result;
+            }
+            else {
+                rulesConvertedToAGSyntax = [node];
+            }
+        }
+        catch (e) {
+            throw new Error("Unknown error during conversion rule to AG syntax: ".concat(getErrorMessage$2(e)));
+        }
+        var rules = [];
+        var convertedAGRules = rulesConvertedToAGSyntax;
+        for (var rulesIndex = 0; rulesIndex < convertedAGRules.length; r

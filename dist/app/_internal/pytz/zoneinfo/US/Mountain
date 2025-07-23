@@ -1,0 +1,48 @@
+support $client modifier');
+                }
+                this.setOptionEnabled(NetworkRuleOption.Client, true);
+                this.advancedModifier = new ClientModifier(optionValue);
+                break;
+            case OPTIONS.DNSREWRITE:
+                if (isCompatibleWith(CompatibilityTypes.Extension)) {
+                    throw new SyntaxError('Extension doesn\'t support $dnsrewrite modifier');
+                }
+                this.setOptionEnabled(NetworkRuleOption.DnsRewrite, true);
+                this.advancedModifier = new DnsRewriteModifier(optionValue);
+                break;
+            case OPTIONS.DNSTYPE:
+                if (isCompatibleWith(CompatibilityTypes.Extension)) {
+                    throw new SyntaxError('Extension doesn\'t support $dnstype modifier');
+                }
+                this.setOptionEnabled(NetworkRuleOption.DnsType, true);
+                this.advancedModifier = new DnsTypeModifier(optionValue);
+                break;
+            case OPTIONS.CTAG:
+                if (isCompatibleWith(CompatibilityTypes.Extension)) {
+                    throw new SyntaxError('Extension doesn\'t support $ctag modifier');
+                }
+                this.setOptionEnabled(NetworkRuleOption.Ctag, true);
+                this.advancedModifier = new CtagModifier(optionValue);
+                break;
+            case OPTIONS.APP:
+                if (isCompatibleWith(CompatibilityTypes.Extension)) {
+                    throw new SyntaxError('Extension doesn\'t support $app modifier');
+                }
+                this.appModifier = new AppModifier(optionValue);
+                break;
+            case OPTIONS.NETWORK:
+                if (isCompatibleWith(CompatibilityTypes.Extension)) {
+                    throw new SyntaxError('Extension doesn\'t support $network modifier');
+                }
+                this.setOptionEnabled(NetworkRuleOption.Network, true);
+                break;
+            case OPTIONS.EXTENSION:
+                if (isCompatibleWith(CompatibilityTypes.Extension)) {
+                    throw new SyntaxError('Extension doesn\'t support $extension modifier');
+                }
+                this.setOptionEnabled(NetworkRuleOption.Extension, !exception);
+                break;
+            case OPTIONS.ALL:
+                if (this.isAllowlist()) {
+                    throw new SyntaxError('Rule with $all modifier can not be allowlist rule');
+            

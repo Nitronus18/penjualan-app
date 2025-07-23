@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% block title %}Pembelian Bahan{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">🧾 Pencatatan Pembelian Bahan</h1>
+
+<div class="row">
+  <div class="col-md-6">
+    <form method="POST" class="card shadow-sm p-4 mb-4 bg-white rounded">
+      <h5>Tambah Pembelian</h5>
+      <div class="mb-3">
+        <label class="form-label">Bahan</label>
+        <select class="form-select" name="bahan_id" required>
+          {% for b in bahan %}
+          <option value="{{ b.id }}">{{ b.nama }} ({{ b.satuan or '-' }})</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Jumlah</label>
+        <input type="number" step="0.01" name="jumlah" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Harga Total</label>
+        <input type="number" name="harga_total" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-success rounded-pill">💾 Simpan Pembelian</button>
+    </form>
+  </div>
+
+  <div class="col-md-6">
+    <form method="POST" action="/bahan/tambah" class="card shadow-sm p-4 mb-4 bg-white rounded">
+      <h5>Tambah Bahan Baru</h5>
+      <div class="mb-3">
+        <label class="form-label">Nama Bahan</label>
+        <input type="text" name="nama" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Satuan</label>
+        <input type="text" name="satuan" class="form-control" placeholder="contoh: gram, liter, bungkus">
+      </div>
+      <button type="submit" class="btn btn-primary rounded-pill">➕ Tambah Bahan</button>
+    </form>
+  </div>
+</div>
+
+<hr>
+
+<!-- Form Filter -->
+<form method="get" class="row gy-2 gx-2 align-items-center mb-3">
+  <div class="col-auto">
+    <select name="mode" class="form-select">
+      <option value="harian" {% if mode == 'harian' %}selected{% endif %}>Per Hari</option>
+      <option value="mingguan" {% if mode == 'mingguan' %}selected{% endif %}>Per Minggu</option>
+      <option value="bulanan" {% if mode == 'bulanan' %}selected{% endif %}>Per Bulan</option>
+    </select>
+  </div>
+  <div class="col-auto">
+    <input type="date" name="tanggal" value="{{ tanggal }}" class="form-control" required>
+  </div>
+  <div class="col-auto">
+  <button type="submit" class="btn btn-success rounded-pill">🔍 Filter</button>
+</div>
+<div class="col-auto">
+  <a href="/export/pembelian-ringkas-xlsx?mode={{ mode }}&tanggal={{ tanggal }}"
+     class="btn btn-outline-primary rounded-pill">
+    <i class="bi bi-file-earmark-excel"></i> Ekspor Excel
+  </a>
+</div>
+
+</form>
+
+<!-- Total -->
+<div class="alert alert-info">
+  <strong>Total Pengeluaran:</strong> {{ total_pengeluaran|rupiah }}
+</div>
+
+
+<h5>📌 Template / Riwayat Pembelian Terakhir</h5>
+<table class="table table-bordered table-hover bg-white">
+  <thead>
+    <tr>
+      <th>Bahan</th>
+      <th>Jumlah</th>
+      <th>Harga Total</th>
+      <th>Tanggal</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for p in pembelian_template %}
+    <tr>
+      <td>{{ p.nama }}</td>
+      <td>{{ p.jumlah }}</td>
+      <td>{{ p.harga_total|rupiah }}</td>
+      <td>{{ p.tanggal }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

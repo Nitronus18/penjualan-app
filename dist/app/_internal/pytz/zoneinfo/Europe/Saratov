@@ -1,0 +1,25 @@
+ns)
+            !== NetworkRuleGroupOptions.RemoveHeaderCompatibleOptions) {
+            throw new SyntaxError('$removeheader rules are not compatible with some other modifiers');
+        }
+        if (this.headerModifier && this.isOptionEnabled(NetworkRuleOption.Header)) {
+            var removeHeaderValue = this.getAdvancedModifierValue();
+            if (!removeHeaderValue || removeHeaderValue.includes('request:')) {
+                var message = 'Request headers removal of $removeheaders is not compatible with $header rules.';
+                throw new SyntaxError(message);
+            }
+        }
+    };
+    NetworkRule.prototype.validateToRule = function () {
+        if (this.denyAllowDomains) {
+            throw new SyntaxError('modifier $to is not compatible with $denyallow modifier');
+        }
+    };
+    NetworkRule.prototype.validateDenyallowRule = function () {
+        if (this.toModifier) {
+            throw new SyntaxError('modifier $to is not compatible with $denyallow modifier');
+        }
+    };
+    NetworkRule.CATEGORY_1_OPTIONS_MASK = NetworkRuleOption.ThirdParty
+        | NetworkRuleOption.MatchCase
+        | NetworkRuleOption.DnsRe

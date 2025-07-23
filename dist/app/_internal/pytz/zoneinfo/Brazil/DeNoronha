@@ -1,0 +1,14 @@
+ allStaticBadFilterRules.get(r.hash);
+                            if (!fastMatchedBadFilterRules) {
+                                return true;
+                            }
+                            for (var i = 0; i < fastMatchedBadFilterRules.length; i += 1) {
+                                var rule = fastMatchedBadFilterRules[i];
+                                var badFilterRule = rule.rule;
+                                var ruleToCheck = r.rule;
+                                if (badFilterRule.negatesBadfilter(ruleToCheck)) {
+                                    return false;
+                                }
+                            }
+                            return true;
+   

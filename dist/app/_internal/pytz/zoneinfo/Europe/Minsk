@@ -1,0 +1,30 @@
+e.enabledOptions) {
+            return false;
+        }
+        if (this.disabledOptions !== specifiedRule.disabledOptions) {
+            return false;
+        }
+        if (!stringArraysEquals(this.getRestrictedDomains(), specifiedRule.getRestrictedDomains())) {
+            return false;
+        }
+        if (!stringArraysHaveIntersection(this.getPermittedDomains(), specifiedRule.getPermittedDomains())) {
+            return false;
+        }
+        return true;
+    };
+    NetworkRule.prototype.isHostLevelNetworkRule = function () {
+        var _a, _b;
+        if (((_a = this.domainModifier) === null || _a === void 0 ? void 0 : _a.hasPermittedDomains()) || ((_b = this.domainModifier) === null || _b === void 0 ? void 0 : _b.hasRestrictedDomains())) {
+            return false;
+        }
+        if (this.permittedRequestTypes !== 0 && this.restrictedRequestTypes !== 0) {
+            return false;
+        }
+        if (this.disabledOptions !== NetworkRuleOption.NotSet) {
+            return false;
+        }
+        if (this.enabledOptions !== NetworkRuleOption.NotSet) {
+            return ((this.enabledOptions
+                & NetworkRuleGroupOptions.OptionHostLevelRules)
+                | (this.enabledOptions
+                    ^ NetworkRuleGroupOptions.OptionHostLevelRules)) === NetworkR

@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title %}Laporan Stok{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">📦 Laporan Stok Produk</h1>
+
+{% set ns = namespace(total=0) %}
+
+<form method="get" class="mb-4 row gx-2 gy-2 align-items-center">
+  <div class="col-auto">
+    <select name="mode" class="form-select">
+      <option value="harian">Per Hari</option>
+      <option value="mingguan">Per Minggu</option>
+      <option value="bulanan">Per Bulan</option>
+    </select>
+  </div>
+  <div class="col-auto">
+    <input type="date" name="tanggal" class="form-control" required>
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-success">Tampilkan</button>
+  </div>
+</form>
+
+<!-- Tombol Ekspor Gabungan Excel -->
+<div class="mb-4">
+  <a href="/export/laporan-gabungan-xlsx?mode={{ mode }}&tanggal={{ tanggal }}"
+     class="btn btn-outline-primary rounded-pill px-4">
+    <i class="bi bi-file-earmark-excel"></i> Ekspor Excel Gabungan (Penjualan + Pembelian)
+  </a>
+</div>
+
+
+
+<canvas id="chartPemasukan" height="100"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctx = document.getElementById('chartPemasukan');
+  const chart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: {{ labels|tojson }},
+      datasets: [{
+        label: 'Total Pemasukan',
+        data: {{ values|tojson }},
+        borderWidth: 1,
+        backgroundColor: '#4EBD7C'
+      }]
+    },
+    options: {
+      scales: {
+        y: { beginAtZero: true }
+      }
+    }
+  });
+</script>
+
+
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Nama Produk</th>
+      <th>Harga Satuan</th>
+      <th>Stok Saat Ini</th>
+      <th>Total Nilai Stok</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for p in produk %}
+    <tr>
+      <td>{{ p.nama }}</td>
+      <td>{{ p.harga|rupiah }}</td>
+      <td>{{ p.stok }}</td>
+      <td>{{ (p.stok * p.harga)|rupiah }}</td>
+    </tr>
+    {% set ns.total = ns.total + (p.stok * p.harga) %}
+    {% endfor %}
+  </tbody>
+</table>
+<a href="/export/laporan" class="btn btn-sm btn-success mb-3">
+  <i class="bi bi-file-earmark-arrow-down"></i> Ekspor ke CSV
+</a>
+
+<div class="alert alert-success mt-4">
+  <strong>Total Nilai Semua Stok:</strong> {{ ns.total|rupiah }}
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+D_MODULE_3__.z.string().optional(),
+    path: zod__WEBPACK_IMPORTED_MODULE_3__.z.string().optional(),
+    port: zod__WEBPACK_IMPORTED_MODULE_3__.z.string().optional(),
+    query: zod__WEBPACK_IMPORTED_MODULE_3__.z.string().optional(),
+    queryTransform: QueryTransformValidator.optional(),
+    scheme: zod__WEBPACK_IMPORTED_MODULE_3__.z.string().optional(),
+    username: zod__WEBPACK_IMPORTED_MODULE_3__.z.string().optional(),
+});
+var RedirectValidator = zod__WEBPACK_IMPORTED_MODULE_3__.z.strictObject({
+    extensionPath: zod__WEBPACK_IMPORTED_MODULE_3__.z.string().optional(),
+    regexSubstitution: zod__WEBPACK_IMPORTED_MODULE_3__.z.string().optional(),
+    transform: URLTransformValidator.optional(),
+    url: zod__WEBPACK_IMPORTED_MODULE_3__.z.string().optional(),
+});
+var HeaderOperation;
+(function (HeaderOperation) {
+    HeaderOperation["Append"] = "append";
+    HeaderOperation["Set"] = "set";
+    HeaderOperation["Remove"] = "remove";
+})(HeaderOperation || (HeaderOperation = {}));

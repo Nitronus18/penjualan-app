@@ -1,0 +1,44 @@
+        }
+        if (this.permittedRequestTypes !== RequestType$1.NotSet) {
+            var numberOfPermittedRequestTypes = getBitCount(this.permittedRequestTypes);
+            var relativeWeight = NetworkRule.CategoryTwoWeight / numberOfPermittedRequestTypes;
+            this.priorityWeight += NetworkRule.CategoryTwoWeight + relativeWeight;
+        }
+        if (((_b = this.methodModifier) === null || _b === void 0 ? void 0 : _b.permittedValues) && this.methodModifier.permittedValues.length > 0) {
+            var relativeWeight = NetworkRule.CategoryTwoWeight / this.methodModifier.permittedValues.length;
+            this.priorityWeight += NetworkRule.CategoryTwoWeight + relativeWeight;
+        }
+        if (this.headerModifier) {
+            this.priorityWeight += NetworkRule.CategoryTwoWeight;
+        }
+        if (domainModifier === null || domainModifier === void 0 ? void 0 : domainModifier.hasPermittedDomains()) {
+            var relativeWeight = NetworkRule.CategoryThreeWeight / domainModifier.getPermittedDomains().length;
+            this.priorityWeight += NetworkRule.CategoryThreeWeight + relativeWeight;
+        }
+        if (this.isOptionEnabled(NetworkRuleOption.Redirect)) {
+            this.priorityWeight += NetworkRule.CategoryFourWeight;
+        }
+        this.priorityWeight += NetworkRule.CategoryFiveWeight * countEnabledBits(this.enabledOptions, NetworkRule.SPECIFIC_EXCLUSIONS_MASK);
+        if (this.isAllowlist()) {
+            this.priorityWeight += NetworkRule.CategorySixWeight;
+        }
+        if (this.isOptionEnabled(NetworkRuleOption.Important)) {
+            this.priorityWeight += NetworkRule.CategorySevenWeight;
+        }
+        this.priorityWeight = Math.ceil(this.priorityWeight);
+    };
+    NetworkRule.prototype.validateOptions = function () {
+        if (this.advancedModifier instanceof RemoveParamModifier) {
+            this.validateRemoveParamRule();
+        }
+        else if (this.advancedModifier instanceof RemoveHeaderModifier) {
+            this.validateRemoveHeaderRule();
+        }
+        else if (this.advancedModifier instanceof PermissionsModifier) {
+            this.validatePermissionsRule();
+        }
+        else if (this.headerModifier instanceof HeaderModifier) {
+            this.validateHeaderRule();
+        }
+        else if (this.toModifier !== null) {
+            thi

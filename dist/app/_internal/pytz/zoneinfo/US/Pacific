@@ -1,0 +1,57 @@
+sh(task.value);
+                        });
+                        return [2 , res];
+                }
+            });
+        });
+    };
+    return NetworkRulesScanner;
+}());
+var DeclarativeFilterConverter =  (function () {
+    function DeclarativeFilterConverter() {
+    }
+    DeclarativeFilterConverter.checkConverterOptions = function (options) {
+        var resourcesPath = options.resourcesPath, maxNumberOfRules = options.maxNumberOfRules, maxNumberOfRegexpRules = options.maxNumberOfRegexpRules;
+        if (resourcesPath !== undefined) {
+            var firstChar = 0;
+            var lastChar = resourcesPath.length > 0
+                ? resourcesPath.length - 1
+                : 0;
+            if (resourcesPath[firstChar] !== '/') {
+                var msg = 'Path to web accessible resources should '
+                    + "be started with leading slash: ".concat(resourcesPath);
+                throw new ResourcesPathError(msg);
+            }
+            if (resourcesPath[lastChar] === '/') {
+                var msg = 'Path to web accessible resources should '
+                    + "not be ended with slash: ".concat(resourcesPath);
+                throw new ResourcesPathError(msg);
+            }
+        }
+        if (maxNumberOfRules !== undefined && maxNumberOfRules <= 0) {
+            var msg = 'Maximum number of rules cannot be equal or less than 0';
+            throw new EmptyOrNegativeNumberOfRulesError(msg);
+        }
+        if (maxNumberOfRegexpRules && maxNumberOfRegexpRules < 0) {
+            var msg = 'Maximum number of regexp rules cannot be less than 0';
+            throw new NegativeNumberOfRegexpRulesError(msg);
+        }
+    };
+    DeclarativeFilterConverter.prototype.convertStaticRuleSet = function (filter, options) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _a, errors, filters, scannedStaticFilter, id, badFilterRules, convertedRules, conversionResult;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        if (options) {
+                            DeclarativeFilterConverter.checkConverterOptions(options);
+                        }
+                        return [4 , NetworkRulesScanner.scanRules([filter])];
+                    case 1:
+                        _a = _b.sent(), errors = _a.errors, filters = _a.filters;
+                        scannedStaticFilter = filters[0];
+                        id = scannedStaticFilter.id, badFilterRules = scannedStaticFilter.badFilterRules;
+                        return [4 , DeclarativeRulesConverter.convert(filters, options)];
+                    case 2:
+                        convertedRules = _b.sent();
+                        conversionResult = DeclarativeFilterConverter.collectConvertedResult("ruleset_".concat(id), [fil

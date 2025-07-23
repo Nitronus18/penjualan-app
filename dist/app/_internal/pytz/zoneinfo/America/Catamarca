@@ -1,0 +1,29 @@
+WEBPACK_IMPORTED_MODULE_1__/* .NetworkRuleOption.Cookie */ .SJ.Cookie),
+                    advancedModifier: rule.getAdvancedModifierValue(),
+                },
+            });
+        }
+        if (cspHeaders.length > 0) {
+            requestContextStorage.update(requestId, {
+                responseHeaders: responseHeaders ? [...responseHeaders, ...cspHeaders] : cspHeaders,
+            });
+        }
+    }
+}
+
+/**
+ * Permissions Policy service.
+ */
+class PermissionsPolicyService {
+    /**
+     * Checks if a network rule is sub document rule.
+     *
+     * @param rule Rule to check.
+     * @returns `true` if the rule is sub document rule.
+     */
+    static isSubDocumentRule(rule) {
+        return (rule.getPermittedRequestTypes() & _adguard_tsurlfilter__WEBPACK_IMPORTED_MODULE_1__/* .RequestType.SubDocument */ .xd.SubDocument) === _adguard_tsurlfilter__WEBPACK_IMPORTED_MODULE_1__/* .RequestType.SubDocument */ .xd.SubDocument;
+    }
+    /**
+     * Applies permissions policy directives to the response headers.
+     * @param context Request context.

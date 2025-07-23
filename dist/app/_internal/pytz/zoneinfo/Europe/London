@@ -1,0 +1,104 @@
+eId = isDocumentRequest ? frameId : parentFrameId;
+        // Relate request to main_frame
+        if (requestFrameId === -1) {
+            requestFrameId = 0;
+        }
+        // To mark requests started via navigation from the address bar (real
+        // request or pre-render, it does not matter) as first-party requests,
+        // we get only part of the request context to record only the tab and
+        // frame information before calculating the request referrer.
+        const tabFrameRequestContext = {
+            requestUrl: url,
+            requestType,
+            requestId,
+            frameId,
+            tabId,
+        };
+        const referrerUrl = originUrl
+            || initiator
+            // Comparison of the requested url with the tab frame url in case of
+            // a navigation change from the browser address bar.
+            || tabsApi.getTabMainFrame(tabId)?.url
+            || tabsApi.getTabFrame(tabId, requestFrameId)?.url
+            || url;
+        // Retrieve the rest part of the request context for record all fields.
+        const context = {
+            ...tabFrameRequestContext,
+            eventId: nanoid(),
+            state: "beforeRequest" /* RequestContextState.BeforeRequest */,
+            timestamp: timeStamp,
+            thirdParty: isThirdPartyRequest(url, referrerUrl),
+            referrerUrl,
+            contentType,
+            method: method,
+        };
+        requestContextStorage.set(requestId, context);
+        return { details, context };
+    }
+    /**
+     * Handles onBeforeSendHeaders event.
+     *
+     * @param details WebRequest details.
+     * @returns Request data.
+     */
+    static handleOnBeforeSendHeaders(details) {
+        const { requestId, timeStamp, requestHeaders } = details;
+        const context = requestContextStorage.update(requestId, {
+            state: "beforeSendHeaders" /* RequestContextState.BeforeSendHeaders */,
+            timestamp: timeStamp,
+            requestHeaders,
+        });
+        return { details, context };
+    }
+    /**
+     * Handles onHeadersReceived event.
+     *
+     * @param details WebRequest details.
+     * @returns Request data with context.
+     */
+    static handleOnHeadersReceived(details) {
+        const { requestId, responseHeaders, } = details;
+        const context = requestContextStorage.update(requestId, {
+            state: "headersReceived" /* RequestContextState.HeadersReceived */,
+            responseHeaders,
+        });
+        return { details, context };
+    }
+    /**
+     * Handles onCompleted event.
+     *
+     * @param details WebRequest details.
+     * @returns Request data with context.
+     */
+    static handleOnCompleted(details) {
+        const { requestId, timeStamp } = details;
+        const context = requestContextStorage.update(requestId, {
+            state: "completed" /* RequestContextState.Completed */,
+            timestamp: timeStamp,
+        });
+        return { details, context };
+    }
+    /**
+     * Handles onErrorOccurred event.
+     *
+     * @param details WebRequest details.
+     * @returns Request data with context.
+     */
+    static handleOnErrorOccurred(details) {
+        const { requestId, timeStamp } = details;
+        const context = requestContextStorage.update(requestId, {
+            state: "error" /* RequestContextState.Error */,
+            timestamp: timeStamp,
+        });
+        return { details, context };
+    }
+}
+
+/**
+ * Cookie filtering.
+ *
+ * The following public methods should be set as suitable webrequest events listeners, check sample extension in this
+ * repo for an example.
+ *
+ * Logic introduction:
+ *  CookieFiltering.onBeforeSendH

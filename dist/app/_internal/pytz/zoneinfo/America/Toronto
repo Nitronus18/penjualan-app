@@ -1,0 +1,56 @@
+.responseHeaders,
+                ...permissionsPolicyHeaders,
+            ] : permissionsPolicyHeaders,
+        });
+    }
+}
+
+/**
+ * @file
+ * API for applying rules from background service
+ * by handling web Request API and web navigation events.
+ *
+ * This scheme describes flow for MV3.
+ *
+ * Event data is aggregated into two contexts: {@link RequestContext},
+ * which contains data about the specified request
+ * and {@link TabContext} which contains data about the specified tab and frames inside it.
+ *
+ * Applying {@link NetworkRule} from the background page:
+ *
+ * The cssText, scriptText, scriptletDataList for specified frame are calculated and stored in tab context storage,
+ * at the time {@link RequestEvents.onBeforeRequest} or {@link WebNavigation.onBeforeNavigate} is processed.
+ * In the most cases the onBeforeNavigate event is processed before onBeforeRequest.
+ *
+ * At {@link RequestEvents.onBeforeSendHeaders}, the request headers will be parsed to apply $cookie rules
+ * based on the {@link MatchingResult} stored in {@link requestContextStorage}.
+ * At {@link RequestEvents.onHeadersReceived}, the response headers are handled in the same way.
+ *
+ * At {@link RequestEvents.onErrorOccurred}, the blocked request url will be matched by {@link companiesDbService}
+ * for collecting precise statistics of blocked requests.
+ *
+ * The specified {@link RequestContext} or frame context {@link Frame} will be removed from the storage
+ * on {@link WebNavigation.onCommitted} after injection or {@link RequestEvents.onErrorOccurred} events.
+ *
+ *
+ * Web Request API Event Handling:
+ *
+ *                                       ┌─────────────────────────────┐
+ * Matches {@link MatchingResult}        │                             │
+ * for the request.                      │       onBeforeRequest       ◄─┐
+ * If this is a frame request,           │                             │ │
+ * also matches the                      └──────────────┬──────────────┘ │
+ * {@link CosmeticResult}                               │                │
+ *                                                      │                │
+ *                                                      │                │
+ *                                       ┌──────────────▼──────────────┐ │
+ * Parses request headers and applies    │                             │ │
+ * $cookie rules based on                │      onBeforeSendHeaders    ◄─┼─┐
+ * {@link MatchingResult}.               │                             │ │ │
+ *                                       └──────────────┬──────────────┘ │ │
+ *                                                      │                │ │
+ *                                       ┌──────────────▼──────────────┐ │ │
+ *                                       │                             │ │ │
+ *                                       │        onSendHeaders        │ │ │
+ *                                       │                             │ │ │
+ *                                       └──────────────┬────────────

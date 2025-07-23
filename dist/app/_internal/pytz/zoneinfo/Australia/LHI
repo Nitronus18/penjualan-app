@@ -1,0 +1,47 @@
+
+        return _this;
+    }
+    return MaxScannedRulesError;
+}(Error));
+var TooManyRegexpRulesError =  (function (_super) {
+    __extends(TooManyRegexpRulesError, _super);
+    function TooManyRegexpRulesError(message, excludedRulesIds, numberOfMaximumRules, numberOfExcludedDeclarativeRules) {
+        var _this = _super.call(this, message) || this;
+        _this.name = 'TooManyRegexpRulesError';
+        _this.excludedRulesIds = excludedRulesIds;
+        _this.numberOfMaximumRules = numberOfMaximumRules;
+        _this.numberOfExcludedDeclarativeRules = numberOfExcludedDeclarativeRules;
+        Object.setPrototypeOf(_this, TooManyRegexpRulesError.prototype);
+        return _this;
+    }
+    return TooManyRegexpRulesError;
+}(Error));
+var TooManyRulesError =  (function (_super) {
+    __extends(TooManyRulesError, _super);
+    function TooManyRulesError(message, excludedRulesIds, numberOfMaximumRules, numberOfExcludedDeclarativeRules) {
+        var _this = _super.call(this, message) || this;
+        _this.name = 'TooManyRulesError';
+        _this.excludedRulesIds = excludedRulesIds;
+        _this.numberOfMaximumRules = numberOfMaximumRules;
+        _this.numberOfExcludedDeclarativeRules = numberOfExcludedDeclarativeRules;
+        Object.setPrototypeOf(_this, TooManyRulesError.prototype);
+        return _this;
+    }
+    return TooManyRulesError;
+}(Error));
+var BadFilterRulesConverter =  (function (_super) {
+    __extends(BadFilterRulesConverter, _super);
+    function BadFilterRulesConverter() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    BadFilterRulesConverter.prototype.convert = function (
+    filterId,
+    rules,
+    offsetId) {
+        return Promise.resolve({
+            sourceMapValues: [],
+            declarativeRules: [],
+            errors: [],
+        });
+    };
+    return B

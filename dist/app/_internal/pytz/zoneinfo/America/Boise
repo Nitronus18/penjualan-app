@@ -1,0 +1,26 @@
+tEvent layers?
+        RequestEvents.onBeforeRequest.init((webextension_polyfill__WEBPACK_IMPORTED_MODULE_2___default().webRequest.onBeforeRequest), RequestEvents.handleOnBeforeRequest, { urls: ['<all_urls>'] });
+        const onBeforeSendHeadersOptions = ['requestHeaders'];
+        const onBeforeSendHeadersOptionTypes = (webextension_polyfill__WEBPACK_IMPORTED_MODULE_2___default().webRequest.OnBeforeSendHeadersOptions);
+        if (typeof onBeforeSendHeadersOptionTypes !== 'undefined'
+            && Object.prototype.hasOwnProperty.call(onBeforeSendHeadersOptionTypes, 'EXTRA_HEADERS')) {
+            onBeforeSendHeadersOptions.push('extraHeaders');
+        }
+        RequestEvents.onBeforeSendHeaders.init((webextension_polyfill__WEBPACK_IMPORTED_MODULE_2___default().webRequest.onBeforeSendHeaders), RequestEvents.handleOnBeforeSendHeaders, { urls: ['<all_urls>'] }, onBeforeSendHeadersOptions);
+        const onResponseStartedOptions = ['responseHeaders', 'extraHeaders'];
+        RequestEvents.onResponseStarted.init((webextension_polyfill__WEBPACK_IMPORTED_MODULE_2___default().webRequest.onResponseStarted), RequestEvents.handleOnResponseStarted, { urls: ['<all_urls>'] }, onResponseStartedOptions);
+        const onHeadersReceivedOptions = ['responseHeaders'];
+        const onHeadersReceivedOptionTypes = (webextension_polyfill__WEBPACK_IMPORTED_MODULE_2___default().webRequest.OnHeadersReceivedOptions);
+        if (typeof onHeadersReceivedOptionTypes !== 'undefined'
+            && Object.prototype.hasOwnProperty.call(onBeforeSendHeadersOptionTypes, 'EXTRA_HEADERS')) {
+            onHeadersReceivedOptions.push('extraHeaders');
+        }
+        RequestEvents.onHeadersReceived.init((webextension_polyfill__WEBPACK_IMPORTED_MODULE_2___default().webRequest.onHeadersReceived), RequestEvents.handleOnHeadersReceived, { urls: ['<all_urls>'] }, onHeadersReceivedOptions);
+        RequestEvents.onCompleted.init((webextension_polyfill__WEBPACK_IMPORTED_MODULE_2___default().webRequest.onCompleted), RequestEvents.handleOnCompleted, { urls: ['<all_urls>'] }, ['responseHeaders']);
+        RequestEvents.onErrorOccurred.init((webextension_polyfill__WEBPACK_IMPORTED_MODULE_2___default().webRequest.onErrorOccurred), RequestEvents.handleOnErrorOccurred, { urls: ['<all_urls>'] });
+    }
+    /**
+     * Handles onResponseStarted event.
+     *
+     * @param details WebRequest details.
+     * @returns 

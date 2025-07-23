@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}{{ judul }}{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">{{ judul }}</h2>
+
+<div class="row">
+  {% for p in produk %}
+  <div class="col-md-4 mb-4">
+    <div class="card card-minuman p-3 shadow-sm rounded-4">
+      <div class="card-body">
+        <h5 class="card-title">{{ p.nama }}</h5>
+        <p class="card-text">Harga: <strong>{{ p.harga|rupiah }}</strong></p>
+
+        <p class="card-text">Stok:
+          {% if p.stok < 10 %}
+            <span class="badge bg-danger">{{ p.stok }}</span>
+          {% else %}
+            <span class="badge bg-success">{{ p.stok }}</span>
+          {% endif %}
+        </p>
+
+        {% if p.stok > 0 %}
+        <!-- Form Jual -->
+        <form action="/jual" method="POST" class="d-flex">
+          <input type="hidden" name="produk_id" value="{{ p.id }}">
+          <input type="number" name="jumlah" min="1" placeholder="Jumlah" class="form-control form-control-sm me-2" required>
+          <button type="submit" class="btn btn-sm btn-primary"><i class="bi bi-cart-plus"></i></button>
+        </form>
+        {% endif %}
+
+        <!-- Form Update -->
+        <form action="/update-stok/{{ p.id }}" method="POST" class="d-flex mt-2">
+          <input type="number" name="stok" class="form-control form-control-sm me-2" value="{{ p.stok }}" min="0" required>
+          <button class="btn btn-sm btn-warning"><i class="bi bi-pencil-square"></i></button>
+        </form>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% if produk|length == 0 %}
+  <div class="alert alert-warning text-center">
+    Tidak ada produk dalam daftar ini.
+  </div>
+{% endif %}
+{% endblock %}

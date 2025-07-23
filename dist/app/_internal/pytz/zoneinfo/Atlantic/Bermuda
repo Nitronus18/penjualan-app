@@ -1,0 +1,50 @@
+er id - ".concat(this.filterId, ", line index - ").concat(lineIndex, ", line - ").concat(rawRule);
+                    if (originalRawRule) {
+                        errorMessage += ", original line - ".concat(originalRawRule);
+                    }
+                    var err = new Error(errorMessage);
+                    result.errors.push(err);
+                }
+                continue;
+            }
+            finally {
+                ruleBufferIndex = reader.getCurrentPos();
+                ruleNode = reader.readNext();
+            }
+            var filteredRules = filterFn
+                ? indexedNetworkRulesWithHash.filter(filterFn)
+                : indexedNetworkRulesWithHash;
+            (_a = result.rules).push.apply(_a, filteredRules);
+            curNumberOfScannedNetworkRules += filteredRules.length;
+            if (maxNumberOfScannedNetworkRules !== undefined
+                && curNumberOfScannedNetworkRules >= maxNumberOfScannedNetworkRules) {
+                var lastScannedRule = indexedNetworkRulesWithHash[indexedNetworkRulesWithHash.length - 1];
+                var lineIndex = getRuleSourceIndex(lastScannedRule.index, this.filter.sourceMap);
+                var err = new MaxScannedRulesError("Maximum number of scanned network rules reached at line index ".concat(lineIndex, "."), lineIndex);
+                result.errors.push(err);
+                break;
+            }
+        }
+        return result;
+    };
+    return FilterScanner;
+}());
+var NetworkRulesScanner =  (function () {
+    function NetworkRulesScanner() {
+    }
+    NetworkRulesScanner.scanRules = function (filterList, filterFn, maxNumberOfScannedNetworkRules) {
+        return __awaiter(this, void 0, void 0, function () {
+            var res, promises, tasks;
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        res = {
+                            errors: [],
+                            filters: [],
+                        };
+                        promises = filterList.map(function (filter) { return __awaiter(_this, void 0, void 0, function () {
+                            var scanner, _a, errors, rules, badFilterRules;
+                            return __generator(this, function (_b) {
+                                switch (_b.label) {
+                 

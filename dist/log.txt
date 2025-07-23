@@ -1,0 +1,789 @@
+2025-07-22 19:28:16 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.10.81:5000
+2025-07-22 19:28:16 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-22 19:28:18 [INFO] 127.0.0.1 - - [22/Jul/2025 19:28:18] "GET / HTTP/1.1" 200 -
+2025-07-22 19:28:18 [INFO] 127.0.0.1 - - [22/Jul/2025 19:28:18] "[33mGET /static/img/logo-placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 19:28:20 [INFO] 127.0.0.1 - - [22/Jul/2025 19:28:20] "GET /produk/coklat HTTP/1.1" 200 -
+2025-07-22 19:28:20 [INFO] 127.0.0.1 - - [22/Jul/2025 19:28:20] "GET /static/img/produk/cocoredflorest.png HTTP/1.1" 200 -
+2025-07-22 19:28:20 [INFO] 127.0.0.1 - - [22/Jul/2025 19:28:20] "GET /static/img/produk/cocorockytiramisu.png HTTP/1.1" 200 -
+2025-07-22 19:28:20 [INFO] 127.0.0.1 - - [22/Jul/2025 19:28:20] "GET /static/img/produk/cocotrouble.png HTTP/1.1" 200 -
+2025-07-22 19:28:20 [INFO] 127.0.0.1 - - [22/Jul/2025 19:28:20] "GET /static/img/produk/cocobanana.png HTTP/1.1" 200 -
+2025-07-22 19:28:20 [INFO] 127.0.0.1 - - [22/Jul/2025 19:28:20] "GET /static/img/produk/cocohalloween.png HTTP/1.1" 200 -
+2025-07-22 19:28:20 [INFO] 127.0.0.1 - - [22/Jul/2025 19:28:20] "GET /static/img/produk/cococlassic.png HTTP/1.1" 200 -
+2025-07-22 19:28:20 [INFO] 127.0.0.1 - - [22/Jul/2025 19:28:20] "GET /static/img/produk/cocokulaku.png HTTP/1.1" 200 -
+2025-07-22 19:28:20 [INFO] 127.0.0.1 - - [22/Jul/2025 19:28:20] "GET /static/img/produk/cocolumer.png HTTP/1.1" 200 -
+2025-07-22 19:28:20 [INFO] 127.0.0.1 - - [22/Jul/2025 19:28:20] "GET /static/img/produk/cocomaltino.png HTTP/1.1" 200 -
+2025-07-22 19:28:21 [INFO] 127.0.0.1 - - [22/Jul/2025 19:28:21] "GET /produk/fruit HTTP/1.1" 200 -
+2025-07-22 19:28:21 [INFO] 127.0.0.1 - - [22/Jul/2025 19:28:21] "GET /static/img/produk/strawberry.png HTTP/1.1" 200 -
+2025-07-22 19:28:21 [INFO] 127.0.0.1 - - [22/Jul/2025 19:28:21] "GET /static/img/produk/nanas.png HTTP/1.1" 200 -
+2025-07-22 19:28:21 [INFO] 127.0.0.1 - - [22/Jul/2025 19:28:21] "GET /static/img/produk/durian.png HTTP/1.1" 200 -
+2025-07-22 19:28:21 [INFO] 127.0.0.1 - - [22/Jul/2025 19:28:21] "GET /static/img/produk/blueberry.png HTTP/1.1" 200 -
+2025-07-22 19:28:21 [INFO] 127.0.0.1 - - [22/Jul/2025 19:28:21] "GET /static/img/produk/blewah.png HTTP/1.1" 200 -
+2025-07-22 19:28:21 [INFO] 127.0.0.1 - - [22/Jul/2025 19:28:21] "GET /static/img/produk/alpukat.png HTTP/1.1" 200 -
+2025-07-22 19:28:21 [INFO] 127.0.0.1 - - [22/Jul/2025 19:28:21] "GET /static/img/produk/lychee.png HTTP/1.1" 200 -
+2025-07-22 19:28:22 [INFO] 127.0.0.1 - - [22/Jul/2025 19:28:22] "GET /static/img/produk/mango.png HTTP/1.1" 200 -
+2025-07-22 19:28:22 [INFO] 127.0.0.1 - - [22/Jul/2025 19:28:22] "GET /laporan HTTP/1.1" 200 -
+2025-07-22 19:28:28 [INFO] 127.0.0.1 - - [22/Jul/2025 19:28:28] "GET /laporan?mode=harian&tanggal=2025-07-22 HTTP/1.1" 200 -
+2025-07-22 19:28:29 [INFO] 127.0.0.1 - - [22/Jul/2025 19:28:29] "GET /export/laporan-gabungan-xlsx?mode=harian&tanggal=2025-07-22 HTTP/1.1" 200 -
+2025-07-22 19:29:25 [INFO] 127.0.0.1 - - [22/Jul/2025 19:29:25] "GET /produk/coklat HTTP/1.1" 200 -
+2025-07-22 19:29:25 [INFO] 127.0.0.1 - - [22/Jul/2025 19:29:25] "[36mGET /static/img/produk/cocobanana.png HTTP/1.1[0m" 304 -
+2025-07-22 19:29:25 [INFO] 127.0.0.1 - - [22/Jul/2025 19:29:25] "[36mGET /static/img/produk/cococlassic.png HTTP/1.1[0m" 304 -
+2025-07-22 19:29:25 [INFO] 127.0.0.1 - - [22/Jul/2025 19:29:25] "[36mGET /static/img/produk/cocohalloween.png HTTP/1.1[0m" 304 -
+2025-07-22 19:29:25 [INFO] 127.0.0.1 - - [22/Jul/2025 19:29:25] "[36mGET /static/img/produk/cocokulaku.png HTTP/1.1[0m" 304 -
+2025-07-22 19:29:25 [INFO] 127.0.0.1 - - [22/Jul/2025 19:29:25] "[36mGET /static/img/produk/cocolumer.png HTTP/1.1[0m" 304 -
+2025-07-22 19:29:25 [INFO] 127.0.0.1 - - [22/Jul/2025 19:29:25] "[36mGET /static/img/produk/cocoredflorest.png HTTP/1.1[0m" 304 -
+2025-07-22 19:29:25 [INFO] 127.0.0.1 - - [22/Jul/2025 19:29:25] "[36mGET /static/img/produk/cocomaltino.png HTTP/1.1[0m" 304 -
+2025-07-22 19:29:25 [INFO] 127.0.0.1 - - [22/Jul/2025 19:29:25] "[36mGET /static/img/produk/cocorockytiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 19:29:25 [INFO] 127.0.0.1 - - [22/Jul/2025 19:29:25] "[36mGET /static/img/produk/cocotrouble.png HTTP/1.1[0m" 304 -
+2025-07-22 19:35:08 [INFO] 127.0.0.1 - - [22/Jul/2025 19:35:08] "GET / HTTP/1.1" 200 -
+2025-07-22 19:35:08 [INFO] 127.0.0.1 - - [22/Jul/2025 19:35:08] "[33mGET /static/img/logo-placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 19:35:11 [INFO] 127.0.0.1 - - [22/Jul/2025 19:35:11] "GET /penjualan HTTP/1.1" 200 -
+2025-07-22 19:35:12 [INFO] 127.0.0.1 - - [22/Jul/2025 19:35:12] "GET / HTTP/1.1" 200 -
+2025-07-22 19:35:12 [INFO] 127.0.0.1 - - [22/Jul/2025 19:35:12] "[33mGET /static/img/logo-placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 19:35:14 [INFO] 127.0.0.1 - - [22/Jul/2025 19:35:14] "GET /penjualan HTTP/1.1" 200 -
+2025-07-22 19:35:17 [INFO] 127.0.0.1 - - [22/Jul/2025 19:35:17] "GET /stok/update HTTP/1.1" 200 -
+2025-07-22 19:35:18 [ERROR] Exception on /pembelian [GET]
+Traceback (most recent call last):
+  File "zoneinfo\_common.py", line 12, in load_tzdata
+  File "importlib\resources\_common.py", line 22, in files
+  File "importlib\resources\_common.py", line 53, in get_package
+  File "importlib\resources\_common.py", line 44, in resolve
+  File "importlib\__init__.py", line 126, in import_module
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1126, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1126, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'tzdata'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "flask\app.py", line 1511, in wsgi_app
+  File "flask\app.py", line 919, in full_dispatch_request
+  File "flask\app.py", line 917, in full_dispatch_request
+  File "flask\app.py", line 902, in dispatch_request
+  File "app.py", line 797, in pembelian
+  File "zoneinfo\_common.py", line 24, in load_tzdata
+zoneinfo._common.ZoneInfoNotFoundError: 'No time zone found with key Asia/Jakarta'
+2025-07-22 19:35:18 [INFO] 127.0.0.1 - - [22/Jul/2025 19:35:18] "[35m[1mGET /pembelian HTTP/1.1[0m" 500 -
+2025-07-22 19:35:21 [ERROR] Exception on /pembelian [GET]
+Traceback (most recent call last):
+  File "zoneinfo\_common.py", line 12, in load_tzdata
+  File "importlib\resources\_common.py", line 22, in files
+  File "importlib\resources\_common.py", line 53, in get_package
+  File "importlib\resources\_common.py", line 44, in resolve
+  File "importlib\__init__.py", line 126, in import_module
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1126, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1126, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'tzdata'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "flask\app.py", line 1511, in wsgi_app
+  File "flask\app.py", line 919, in full_dispatch_request
+  File "flask\app.py", line 917, in full_dispatch_request
+  File "flask\app.py", line 902, in dispatch_request
+  File "app.py", line 797, in pembelian
+  File "zoneinfo\_common.py", line 24, in load_tzdata
+zoneinfo._common.ZoneInfoNotFoundError: 'No time zone found with key Asia/Jakarta'
+2025-07-22 19:35:21 [INFO] 127.0.0.1 - - [22/Jul/2025 19:35:21] "[35m[1mGET /pembelian HTTP/1.1[0m" 500 -
+2025-07-22 19:35:32 [ERROR] Exception on /pembelian [GET]
+Traceback (most recent call last):
+  File "zoneinfo\_common.py", line 12, in load_tzdata
+  File "importlib\resources\_common.py", line 22, in files
+  File "importlib\resources\_common.py", line 53, in get_package
+  File "importlib\resources\_common.py", line 44, in resolve
+  File "importlib\__init__.py", line 126, in import_module
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1126, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1126, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'tzdata'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "flask\app.py", line 1511, in wsgi_app
+  File "flask\app.py", line 919, in full_dispatch_request
+  File "flask\app.py", line 917, in full_dispatch_request
+  File "flask\app.py", line 902, in dispatch_request
+  File "app.py", line 797, in pembelian
+  File "zoneinfo\_common.py", line 24, in load_tzdata
+zoneinfo._common.ZoneInfoNotFoundError: 'No time zone found with key Asia/Jakarta'
+2025-07-22 19:35:32 [INFO] 127.0.0.1 - - [22/Jul/2025 19:35:32] "[35m[1mGET /pembelian HTTP/1.1[0m" 500 -
+2025-07-22 19:36:00 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.10.81:5000
+2025-07-22 19:36:00 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-22 21:32:41 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.10.81:5000
+2025-07-22 21:32:41 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-22 21:32:44 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:44] "GET / HTTP/1.1" 200 -
+2025-07-22 21:32:44 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:44] "[33mGET /static/img/logo-placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 21:32:45 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:45] "GET /penjualan HTTP/1.1" 200 -
+2025-07-22 21:32:45 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:45] "GET /laporan HTTP/1.1" 200 -
+2025-07-22 21:32:46 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:46] "GET /penjualan HTTP/1.1" 200 -
+2025-07-22 21:32:47 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:47] "GET /laporan HTTP/1.1" 200 -
+2025-07-22 21:32:47 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:47] "GET /produk HTTP/1.1" 200 -
+2025-07-22 21:32:48 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:48] "GET /static/img/produk/brownsugarklepon.png HTTP/1.1" 200 -
+2025-07-22 21:32:48 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:48] "GET /static/img/produk/cocobanana.png HTTP/1.1" 200 -
+2025-07-22 21:32:48 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:48] "GET /static/img/produk/brownsugarvanillalagoan.png HTTP/1.1" 200 -
+2025-07-22 21:32:48 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:48] "GET /static/img/produk/capucinokulaku.png HTTP/1.1" 200 -
+2025-07-22 21:32:48 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:48] "GET /static/img/produk/browssugardurian.png HTTP/1.1" 200 -
+2025-07-22 21:32:48 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:48] "GET /static/img/produk/brownsugartiramisu.png HTTP/1.1" 200 -
+2025-07-22 21:32:48 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:48] "GET /static/img/produk/estehjumbo.png HTTP/1.1" 200 -
+2025-07-22 21:32:48 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:48] "GET /static/img/produk/alpukat.png HTTP/1.1" 200 -
+2025-07-22 21:32:48 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:48] "GET /static/img/produk/estehjumbojeruknipis.png HTTP/1.1" 200 -
+2025-07-22 21:32:48 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:48] "GET /static/img/produk/blewah.png HTTP/1.1" 200 -
+2025-07-22 21:32:48 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:48] "GET /static/img/produk/blodyvelvet.png HTTP/1.1" 200 -
+2025-07-22 21:32:48 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:48] "GET /static/img/produk/blueberry.png HTTP/1.1" 200 -
+2025-07-22 21:32:48 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:48] "GET /static/img/produk/cococlassic.png HTTP/1.1" 200 -
+2025-07-22 21:32:48 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:48] "GET /static/img/produk/cocokulaku.png HTTP/1.1" 200 -
+2025-07-22 21:32:48 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:48] "GET /static/img/produk/cocohalloween.png HTTP/1.1" 200 -
+2025-07-22 21:32:48 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:48] "GET /static/img/produk/cocolumer.png HTTP/1.1" 200 -
+2025-07-22 21:32:48 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:48] "GET /static/img/produk/cocomaltino.png HTTP/1.1" 200 -
+2025-07-22 21:32:48 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:48] "GET /static/img/produk/cocoredflorest.png HTTP/1.1" 200 -
+2025-07-22 21:32:49 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:49] "GET /static/img/produk/cocorockytiramisu.png HTTP/1.1" 200 -
+2025-07-22 21:32:49 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:49] "GET /static/img/produk/cocotrouble.png HTTP/1.1" 200 -
+2025-07-22 21:32:49 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:49] "GET /static/img/produk/coconutarencoffe.png HTTP/1.1" 200 -
+2025-07-22 21:32:49 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:49] "GET /static/img/produk/coffealagoklat.png HTTP/1.1" 200 -
+2025-07-22 21:32:49 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:49] "GET /static/img/produk/coffepandan.png HTTP/1.1" 200 -
+2025-07-22 21:32:49 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:49] "GET /static/img/produk/coffetiramisu.png HTTP/1.1" 200 -
+2025-07-22 21:32:49 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:49] "GET /static/img/produk/durian.png HTTP/1.1" 200 -
+2025-07-22 21:32:49 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:49] "GET /static/img/produk/duriancoffe.png HTTP/1.1" 200 -
+2025-07-22 21:32:49 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:49] "GET /static/img/produk/goteaapple.png HTTP/1.1" 200 -
+2025-07-22 21:32:49 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:49] "GET /static/img/produk/goteablackcurrent.png HTTP/1.1" 200 -
+2025-07-22 21:32:49 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:49] "GET /static/img/produk/goteagrape.png HTTP/1.1" 200 -
+2025-07-22 21:32:49 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:49] "GET /static/img/produk/goteahoney.png HTTP/1.1" 200 -
+2025-07-22 21:32:49 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:49] "GET /produk/coklat HTTP/1.1" 200 -
+2025-07-22 21:32:49 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:49] "[36mGET /static/img/produk/cocotrouble.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:50 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:50] "[36mGET /static/img/produk/cocorockytiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:50 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:50] "[36mGET /static/img/produk/cocoredflorest.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:50 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:50] "GET /static/img/produk/goteajasmine.png HTTP/1.1" 200 -
+2025-07-22 21:32:50 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:50] "GET /static/img/produk/gotealemon.png HTTP/1.1" 200 -
+2025-07-22 21:32:50 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:50] "GET /static/img/produk/gotealychee.png HTTP/1.1" 200 -
+2025-07-22 21:32:50 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:50] "GET /static/img/produk/goteamangga.png HTTP/1.1" 200 -
+2025-07-22 21:32:50 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:50] "[36mGET /static/img/produk/cococlassic.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:50 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:50] "[36mGET /static/img/produk/cocobanana.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:50 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:50] "[36mGET /static/img/produk/cocomaltino.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:50 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:50] "[36mGET /static/img/produk/cocolumer.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:50 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:50] "[36mGET /static/img/produk/cocohalloween.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:50 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:50] "[36mGET /static/img/produk/cocokulaku.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:50 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:50] "GET /stok/update HTTP/1.1" 200 -
+2025-07-22 21:32:52 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:52] "GET /pembelian HTTP/1.1" 200 -
+2025-07-22 21:32:54 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:54] "GET /produk/EsTeh HTTP/1.1" 200 -
+2025-07-22 21:32:54 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:54] "[36mGET /static/img/produk/estehjumbo.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:54 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:54] "[36mGET /static/img/produk/estehjumbojeruknipis.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:55 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:55] "GET /produk/gotea HTTP/1.1" 200 -
+2025-07-22 21:32:55 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:55] "GET /static/img/produk/goteapeach.png HTTP/1.1" 200 -
+2025-07-22 21:32:55 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:55] "GET /static/img/produk/goteaspecial.png HTTP/1.1" 200 -
+2025-07-22 21:32:55 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:55] "[36mGET /static/img/produk/goteaapple.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:55 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:55] "[36mGET /static/img/produk/goteablackcurrent.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:55 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:55] "GET /static/img/produk/goteamangga.png HTTP/1.1" 200 -
+2025-07-22 21:32:55 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:55] "[35m[1mGET /static/img/produk/gotealychee.png HTTP/1.1[0m" 206 -
+2025-07-22 21:32:55 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:55] "[35m[1mGET /static/img/produk/gotealychee.png HTTP/1.1[0m" 206 -
+2025-07-22 21:32:55 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:55] "[36mGET /static/img/produk/goteagrape.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:56 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:56] "[35m[1mGET /static/img/produk/goteajasmine.png HTTP/1.1[0m" 206 -
+2025-07-22 21:32:56 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:56] "[36mGET /static/img/produk/goteahoney.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:56 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:56] "[35m[1mGET /static/img/produk/gotealemon.png HTTP/1.1[0m" 206 -
+2025-07-22 21:32:56 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:56] "[35m[1mGET /static/img/produk/gotealemon.png HTTP/1.1[0m" 206 -
+2025-07-22 21:32:56 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:56] "GET /produk/coffee HTTP/1.1" 200 -
+2025-07-22 21:32:56 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:56] "[35m[1mGET /static/img/produk/goteajasmine.png HTTP/1.1[0m" 206 -
+2025-07-22 21:32:56 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:56] "[36mGET /static/img/produk/capucinokulaku.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:57 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:57] "[36mGET /static/img/produk/coconutarencoffe.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:57 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:57] "[36mGET /static/img/produk/coffealagoklat.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:57 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:57] "[36mGET /static/img/produk/coffepandan.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:57 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:57] "[36mGET /static/img/produk/duriancoffe.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:57 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:57] "[36mGET /static/img/produk/coffetiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:57 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:57] "GET /produk/spesial HTTP/1.1" 200 -
+2025-07-22 21:32:57 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:57] "GET /static/img/produk/violet.png HTTP/1.1" 200 -
+2025-07-22 21:32:57 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:57] "[36mGET /static/img/produk/blodyvelvet.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:58 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:58] "[36mGET /static/img/produk/brownsugarvanillalagoan.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:58 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:58] "[36mGET /static/img/produk/brownsugarklepon.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:58 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:58] "[36mGET /static/img/produk/brownsugartiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:58 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:58] "[36mGET /static/img/produk/browssugardurian.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:58 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:58] "GET /static/img/produk/greenvelvet.png HTTP/1.1" 200 -
+2025-07-22 21:32:58 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:58] "GET /produk/fruit HTTP/1.1" 200 -
+2025-07-22 21:32:58 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:58] "[36mGET /static/img/produk/blueberry.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:58 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:58] "[36mGET /static/img/produk/blewah.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:58 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:58] "[36mGET /static/img/produk/alpukat.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:58 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:58] "GET /static/img/produk/strawberry.png HTTP/1.1" 200 -
+2025-07-22 21:32:58 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:58] "GET /static/img/produk/nanas.png HTTP/1.1" 200 -
+2025-07-22 21:32:58 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:58] "GET /produk/coklat HTTP/1.1" 200 -
+2025-07-22 21:32:59 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:59] "[36mGET /static/img/produk/cocorockytiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:59 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:59] "[36mGET /static/img/produk/cocotrouble.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:59 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:59] "[36mGET /static/img/produk/cocoredflorest.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:59 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:59] "[36mGET /static/img/produk/durian.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:59 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:59] "GET /static/img/produk/lychee.png HTTP/1.1" 200 -
+2025-07-22 21:32:59 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:59] "[36mGET /static/img/produk/cocobanana.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:59 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:59] "[36mGET /static/img/produk/cocohalloween.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:59 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:59] "[36mGET /static/img/produk/cococlassic.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:59 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:59] "[36mGET /static/img/produk/cocokulaku.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:59 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:59] "GET /produk HTTP/1.1" 200 -
+2025-07-22 21:32:59 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:59] "GET /static/img/produk/mango.png HTTP/1.1" 200 -
+2025-07-22 21:32:59 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:59] "[36mGET /static/img/produk/cocolumer.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:59 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:59] "[36mGET /static/img/produk/nanas.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:59 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:59] "[36mGET /static/img/produk/duriancoffe.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:59 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:59] "[36mGET /static/img/produk/brownsugarvanillalagoan.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:59 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:59] "[36mGET /static/img/produk/cocobanana.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:59 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:59] "[36mGET /static/img/produk/capucinokulaku.png HTTP/1.1[0m" 304 -
+2025-07-22 21:32:59 [INFO] 127.0.0.1 - - [22/Jul/2025 21:32:59] "[36mGET /static/img/produk/brownsugarklepon.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:00 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:00] "[36mGET /static/img/produk/goteaapple.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:00 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:00] "[36mGET /static/img/produk/goteablackcurrent.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:00 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:00] "[36mGET /static/img/produk/browssugardurian.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:00 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:00] "[36mGET /static/img/produk/goteamangga.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:00 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:00] "[36mGET /static/img/produk/gotealychee.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:00 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:00] "[36mGET /static/img/produk/goteahoney.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:00 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:00] "[36mGET /static/img/produk/coffealagoklat.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:00 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:00] "[36mGET /static/img/produk/cocoredflorest.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:00 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:00] "[36mGET /static/img/produk/coffepandan.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:00 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:00] "[36mGET /static/img/produk/cocorockytiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:00 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:00] "[36mGET /static/img/produk/goteagrape.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:00 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:00] "[36mGET /static/img/produk/strawberry.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:00 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:00] "[36mGET /static/img/produk/brownsugartiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:00 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:00] "[36mGET /static/img/produk/cocohalloween.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:00 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:00] "[36mGET /static/img/produk/coconutarencoffe.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:00 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:00] "[36mGET /static/img/produk/cococlassic.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:00 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:00] "[36mGET /static/img/produk/cocokulaku.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:00 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:00] "GET /stok/update HTTP/1.1" 200 -
+2025-07-22 21:33:01 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:01] "[36mGET /static/img/produk/coffetiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:01 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:01] "[36mGET /static/img/produk/estehjumbo.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:01 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:01] "[36mGET /static/img/produk/goteajasmine.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:01 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:01] "[36mGET /static/img/produk/estehjumbojeruknipis.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:01 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:01] "[36mGET /static/img/produk/alpukat.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:01 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:01] "[36mGET /static/img/produk/blewah.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:01 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:01] "[36mGET /static/img/produk/blodyvelvet.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:01 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:01] "[36mGET /static/img/produk/cocomaltino.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:01 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:01] "[36mGET /static/img/produk/blueberry.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:01 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:01] "[36mGET /static/img/produk/cocolumer.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:01 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:01] "[36mGET /static/img/produk/cocotrouble.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:01 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:01] "[36mGET /static/img/produk/durian.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:01 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:01] "[36mGET /static/img/produk/gotealemon.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:13 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:13] "[32mPOST /update-stok/41 HTTP/1.1[0m" 302 -
+2025-07-22 21:33:13 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:13] "GET /stok/update HTTP/1.1" 200 -
+2025-07-22 21:33:16 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:16] "[32mPOST /update-stok/42 HTTP/1.1[0m" 302 -
+2025-07-22 21:33:16 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:16] "GET /stok/update HTTP/1.1" 200 -
+2025-07-22 21:33:18 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:18] "[32mPOST /update-stok/28 HTTP/1.1[0m" 302 -
+2025-07-22 21:33:18 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:18] "GET /stok/update HTTP/1.1" 200 -
+2025-07-22 21:33:23 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:23] "[32mPOST /update-stok/19 HTTP/1.1[0m" 302 -
+2025-07-22 21:33:23 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:23] "GET /stok/update HTTP/1.1" 200 -
+2025-07-22 21:33:26 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:26] "[32mPOST /update-stok/22 HTTP/1.1[0m" 302 -
+2025-07-22 21:33:26 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:26] "GET /stok/update HTTP/1.1" 200 -
+2025-07-22 21:33:30 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:30] "GET / HTTP/1.1" 200 -
+2025-07-22 21:33:30 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:30] "[33mGET /static/img/logo-placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 21:33:31 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:31] "GET /penjualan HTTP/1.1" 200 -
+2025-07-22 21:33:32 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:32] "GET /laporan HTTP/1.1" 200 -
+2025-07-22 21:33:33 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:33] "GET /produk HTTP/1.1" 200 -
+2025-07-22 21:33:33 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:33] "[36mGET /static/img/produk/nanas.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:33 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:33] "[36mGET /static/img/produk/capucinokulaku.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:33 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:33] "[36mGET /static/img/produk/brownsugarklepon.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:33 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:33] "[36mGET /static/img/produk/cocobanana.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:33 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:33] "[36mGET /static/img/produk/browssugardurian.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:33 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:33] "[36mGET /static/img/produk/brownsugarvanillalagoan.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:34 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:34] "[36mGET /static/img/produk/cocorockytiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:34 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:34] "[36mGET /static/img/produk/cocoredflorest.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:34 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:34] "[36mGET /static/img/produk/strawberry.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:34 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:34] "[36mGET /static/img/produk/brownsugartiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:34 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:34] "[36mGET /static/img/produk/cococlassic.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:34 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:34] "[36mGET /static/img/produk/cocohalloween.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:34 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:34] "GET /produk/coklat HTTP/1.1" 200 -
+2025-07-22 21:33:34 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:34] "[36mGET /static/img/produk/cocokulaku.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:34 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:34] "[36mGET /static/img/produk/estehjumbojeruknipis.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:34 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:34] "[36mGET /static/img/produk/estehjumbo.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:34 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:34] "[36mGET /static/img/produk/alpukat.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:34 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:34] "[36mGET /static/img/produk/blewah.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:34 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:34] "[36mGET /static/img/produk/cocokulaku.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:34 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:34] "[36mGET /static/img/produk/cocotrouble.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:34 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:34] "[36mGET /static/img/produk/cocorockytiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:34 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:34] "[36mGET /static/img/produk/cocoredflorest.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:34 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:34] "[36mGET /static/img/produk/cocobanana.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:34 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:34] "[36mGET /static/img/produk/cococlassic.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:35 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:35] "[36mGET /static/img/produk/cocohalloween.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:35 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:35] "[36mGET /static/img/produk/cocolumer.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:35 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:35] "GET /static/img/produk/cocomaltino.png HTTP/1.1" 200 -
+2025-07-22 21:33:35 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:35] "GET /stok/update HTTP/1.1" 200 -
+2025-07-22 21:33:36 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:36] "GET /produk HTTP/1.1" 200 -
+2025-07-22 21:33:36 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:36] "GET /static/img/produk/alpukat.png HTTP/1.1" 200 -
+2025-07-22 21:33:37 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:37] "[36mGET /static/img/produk/capucinokulaku.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:37 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:37] "[36mGET /static/img/produk/cocobanana.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:37 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:37] "[36mGET /static/img/produk/brownsugarvanillalagoan.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:37 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:37] "[36mGET /static/img/produk/browssugardurian.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:37 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:37] "[36mGET /static/img/produk/cocokulaku.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:37 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:37] "[36mGET /static/img/produk/cocomaltino.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:37 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:37] "[36mGET /static/img/produk/cocolumer.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:37 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:37] "[36mGET /static/img/produk/cocohalloween.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:37 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:37] "[36mGET /static/img/produk/cococlassic.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:37 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:37] "[36mGET /static/img/produk/cocorockytiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:37 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:37] "[36mGET /static/img/produk/cocoredflorest.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:37 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:37] "[36mGET /static/img/produk/brownsugartiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:37 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:37] "GET /static/img/produk/blewah.png HTTP/1.1" 200 -
+2025-07-22 21:33:37 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:37] "GET /static/img/produk/blodyvelvet.png HTTP/1.1" 200 -
+2025-07-22 21:33:37 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:37] "GET /laporan HTTP/1.1" 200 -
+2025-07-22 21:33:37 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:37] "[36mGET /static/img/produk/estehjumbo.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:37 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:37] "[36mGET /static/img/produk/estehjumbojeruknipis.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:37 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:37] "GET /static/img/produk/blueberry.png HTTP/1.1" 200 -
+2025-07-22 21:33:45 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:45] "GET /laporan?mode=harian&tanggal=2025-07-22 HTTP/1.1" 200 -
+2025-07-22 21:33:47 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:47] "GET /penjualan HTTP/1.1" 200 -
+2025-07-22 21:33:48 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:48] "GET / HTTP/1.1" 200 -
+2025-07-22 21:33:48 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:48] "[33mGET /static/img/logo-placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 21:33:49 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:49] "GET /produk HTTP/1.1" 200 -
+2025-07-22 21:33:49 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:49] "GET /static/img/produk/brownsugarklepon.png HTTP/1.1" 200 -
+2025-07-22 21:33:49 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:49] "[36mGET /static/img/produk/browssugardurian.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:49 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:49] "[36mGET /static/img/produk/brownsugartiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:49 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:49] "[36mGET /static/img/produk/cocobanana.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:49 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:49] "[36mGET /static/img/produk/cocokulaku.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:49 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:49] "[36mGET /static/img/produk/capucinokulaku.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:50 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:50] "[36mGET /static/img/produk/cocomaltino.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:50 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:50] "[36mGET /static/img/produk/cocolumer.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:50 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:50] "[36mGET /static/img/produk/cocohalloween.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:50 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:50] "[36mGET /static/img/produk/cocorockytiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:50 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:50] "[36mGET /static/img/produk/cococlassic.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:50 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:50] "[36mGET /static/img/produk/cocoredflorest.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:50 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:50] "[36mGET /static/img/produk/brownsugarvanillalagoan.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:50 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:50] "[36mGET /static/img/produk/estehjumbo.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:50 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:50] "[36mGET /static/img/produk/estehjumbojeruknipis.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:50 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:50] "[36mGET /static/img/produk/alpukat.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:50 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:50] "[36mGET /static/img/produk/blewah.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:50 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:50] "[36mGET /static/img/produk/blodyvelvet.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:50 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:50] "[36mGET /static/img/produk/blueberry.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:50 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:50] "GET /static/img/produk/cocotrouble.png HTTP/1.1" 200 -
+2025-07-22 21:33:50 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:50] "GET /static/img/produk/coconutarencoffe.png HTTP/1.1" 200 -
+2025-07-22 21:33:50 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:50] "GET /static/img/produk/coffealagoklat.png HTTP/1.1" 200 -
+2025-07-22 21:33:50 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:50] "[36mGET /static/img/produk/coffepandan.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:51 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:51] "[36mGET /static/img/produk/coffetiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:51 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:51] "[36mGET /static/img/produk/durian.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:51 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:51] "[36mGET /static/img/produk/duriancoffe.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:51 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:51] "[36mGET /static/img/produk/goteaapple.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:51 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:51] "[36mGET /static/img/produk/goteablackcurrent.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:51 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:51] "[36mGET /static/img/produk/goteagrape.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:51 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:51] "[36mGET /static/img/produk/goteahoney.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:51 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:51] "[36mGET /static/img/produk/goteajasmine.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:51 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:51] "[36mGET /static/img/produk/gotealemon.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:51 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:51] "[36mGET /static/img/produk/gotealychee.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:51 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:51] "[36mGET /static/img/produk/goteamangga.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:51 [INFO] Penjualan dicatat: produk_id=41, jumlah=1, waktu=2025-07-22 21:33:51
+2025-07-22 21:33:51 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:51] "[32mPOST /jual HTTP/1.1[0m" 302 -
+2025-07-22 21:33:51 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:51] "GET /static/img/produk/goteapeach.png HTTP/1.1" 200 -
+2025-07-22 21:33:51 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:51] "GET /produk HTTP/1.1" 200 -
+2025-07-22 21:33:51 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:51] "[36mGET /static/img/produk/estehjumbo.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:51 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:51] "[36mGET /static/img/produk/browssugardurian.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:51 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:51] "[36mGET /static/img/produk/cocobanana.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:51 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:51] "[36mGET /static/img/produk/brownsugartiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:52 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:52] "[36mGET /static/img/produk/capucinokulaku.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:52 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:52] "[36mGET /static/img/produk/brownsugarklepon.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:52 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:52] "[36mGET /static/img/produk/cocokulaku.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:52 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:52] "[36mGET /static/img/produk/cocohalloween.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:52 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:52] "[36mGET /static/img/produk/cococlassic.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:52 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:52] "[36mGET /static/img/produk/cocomaltino.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:52 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:52] "[36mGET /static/img/produk/cocolumer.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:52 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:52] "[36mGET /static/img/produk/cocorockytiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:52 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:52] "[36mGET /static/img/produk/cocoredflorest.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:52 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:52] "[36mGET /static/img/produk/brownsugarvanillalagoan.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:52 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:52] "[36mGET /static/img/produk/estehjumbojeruknipis.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:52 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:52] "[36mGET /static/img/produk/alpukat.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:52 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:52] "[36mGET /static/img/produk/blewah.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:52 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:52] "[36mGET /static/img/produk/blodyvelvet.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:52 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:52] "[36mGET /static/img/produk/blueberry.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:52 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:52] "[36mGET /static/img/produk/cocotrouble.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:52 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:52] "[36mGET /static/img/produk/coconutarencoffe.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:52 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:52] "[36mGET /static/img/produk/coffealagoklat.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:52 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:52] "[36mGET /static/img/produk/coffepandan.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:53 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:53] "[36mGET /static/img/produk/coffetiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:53 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:53] "[36mGET /static/img/produk/durian.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:53 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:53] "[36mGET /static/img/produk/duriancoffe.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:53 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:53] "[36mGET /static/img/produk/goteaapple.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:53 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:53] "[36mGET /static/img/produk/goteablackcurrent.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:53 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:53] "[36mGET /static/img/produk/goteagrape.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:53 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:53] "[36mGET /static/img/produk/goteahoney.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:53 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:53] "[36mGET /static/img/produk/goteajasmine.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:53 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:53] "[36mGET /static/img/produk/gotealemon.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:53 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:53] "[36mGET /static/img/produk/gotealychee.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:53 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:53] "[36mGET /static/img/produk/goteamangga.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:53 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:53] "[35m[1mGET /static/img/produk/goteapeach.png HTTP/1.1[0m" 206 -
+2025-07-22 21:33:53 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:53] "GET /static/img/produk/goteaspecial.png HTTP/1.1" 200 -
+2025-07-22 21:33:53 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:53] "GET /static/img/produk/greenvelvet.png HTTP/1.1" 200 -
+2025-07-22 21:33:53 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:53] "GET /static/img/produk/lychee.png HTTP/1.1" 200 -
+2025-07-22 21:33:53 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:53] "GET /static/img/produk/mango.png HTTP/1.1" 200 -
+2025-07-22 21:33:53 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:53] "GET /produk?q=&stok=tersedia HTTP/1.1" 200 -
+2025-07-22 21:33:53 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:53] "[36mGET /static/img/produk/estehjumbo.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:53 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:53] "[36mGET /static/img/produk/estehjumbojeruknipis.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:54 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:54] "[36mGET /static/img/produk/brownsugarklepon.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:54 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:54] "[36mGET /static/img/produk/brownsugarvanillalagoan.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:54 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:54] "GET /static/img/produk/nanas.png HTTP/1.1" 200 -
+2025-07-22 21:33:54 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:54] "[36mGET /static/img/produk/capucinokulaku.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:54 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:54] "[35m[1mGET /static/img/produk/goteapeach.png HTTP/1.1[0m" 206 -
+2025-07-22 21:33:54 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:54] "[36mGET /static/img/produk/strawberry.png HTTP/1.1[0m" 304 -
+2025-07-22 21:33:55 [INFO] 127.0.0.1 - - [22/Jul/2025 21:33:55] "GET /penjualan HTTP/1.1" 200 -
+2025-07-22 21:34:02 [INFO] 127.0.0.1 - - [22/Jul/2025 21:34:02] "GET /penjualan HTTP/1.1" 200 -
+2025-07-22 21:34:05 [INFO] 127.0.0.1 - - [22/Jul/2025 21:34:05] "GET /penjualan?tanggal=&kategori=coklat HTTP/1.1" 200 -
+2025-07-22 21:34:07 [INFO] 127.0.0.1 - - [22/Jul/2025 21:34:07] "GET /penjualan?tanggal=&kategori=fruit HTTP/1.1" 200 -
+2025-07-22 21:34:09 [INFO] 127.0.0.1 - - [22/Jul/2025 21:34:09] "GET /penjualan?tanggal=&kategori=semua HTTP/1.1" 200 -
+2025-07-22 21:52:17 [INFO] 192.168.10.237 - - [22/Jul/2025 21:52:17] "GET / HTTP/1.1" 200 -
+2025-07-22 21:52:17 [INFO] 192.168.10.237 - - [22/Jul/2025 21:52:17] "[33mGET /static/img/logo-placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 21:52:17 [INFO] 192.168.10.237 - - [22/Jul/2025 21:52:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-22 21:52:22 [INFO] 192.168.10.237 - - [22/Jul/2025 21:52:22] "GET /stok/update HTTP/1.1" 200 -
+2025-07-22 21:52:40 [INFO] 192.168.10.237 - - [22/Jul/2025 21:52:40] "GET /stok/update HTTP/1.1" 200 -
+2025-07-22 21:52:55 [INFO] 127.0.0.1 - - [22/Jul/2025 21:52:55] "GET /penjualan?tanggal=&kategori=semua HTTP/1.1" 200 -
+2025-07-22 23:15:42 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.10.81:5000
+2025-07-22 23:15:42 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-22 23:15:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:15:44] "GET / HTTP/1.1" 200 -
+2025-07-22 23:15:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:15:44] "[33mGET /static/img/logo-placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:15:45 [ERROR] Exception on /penjualan [GET]
+Traceback (most recent call last):
+  File "flask\app.py", line 1511, in wsgi_app
+  File "flask\app.py", line 919, in full_dispatch_request
+  File "flask\app.py", line 917, in full_dispatch_request
+  File "flask\app.py", line 902, in dispatch_request
+  File "app.py", line 494, in halaman_penjualan
+sqlite3.OperationalError: no such column: p.transaksi_id
+2025-07-22 23:15:45 [INFO] 127.0.0.1 - - [22/Jul/2025 23:15:45] "[35m[1mGET /penjualan HTTP/1.1[0m" 500 -
+2025-07-22 23:16:17 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.10.81:5000
+2025-07-22 23:16:17 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-22 23:16:19 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:19] "GET / HTTP/1.1" 200 -
+2025-07-22 23:16:19 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:19] "[33mGET /static/img/logo-placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:16:20 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:20] "GET /penjualan HTTP/1.1" 200 -
+2025-07-22 23:16:22 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:22] "GET /laporan HTTP/1.1" 200 -
+2025-07-22 23:16:22 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:22] "GET /penjualan HTTP/1.1" 200 -
+2025-07-22 23:16:23 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:23] "GET / HTTP/1.1" 200 -
+2025-07-22 23:16:23 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:23] "[33mGET /static/img/logo-placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:16:25 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:25] "GET /stok/update HTTP/1.1" 200 -
+2025-07-22 23:16:27 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:27] "[32mPOST /update-stok/41 HTTP/1.1[0m" 302 -
+2025-07-22 23:16:27 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:27] "GET /stok/update HTTP/1.1" 200 -
+2025-07-22 23:16:29 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:29] "[32mPOST /update-stok/42 HTTP/1.1[0m" 302 -
+2025-07-22 23:16:29 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:29] "GET /stok/update HTTP/1.1" 200 -
+2025-07-22 23:16:31 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:31] "GET /penjualan HTTP/1.1" 200 -
+2025-07-22 23:16:36 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:36] "GET /produk HTTP/1.1" 200 -
+2025-07-22 23:16:36 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:36] "GET /static/img/produk/cocobanana.png HTTP/1.1" 200 -
+2025-07-22 23:16:36 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:36] "GET /static/img/produk/brownsugartiramisu.png HTTP/1.1" 200 -
+2025-07-22 23:16:36 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:36] "GET /static/img/produk/capucinokulaku.png HTTP/1.1" 200 -
+2025-07-22 23:16:36 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:36] "GET /static/img/produk/browssugardurian.png HTTP/1.1" 200 -
+2025-07-22 23:16:36 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:36] "GET /static/img/produk/brownsugarklepon.png HTTP/1.1" 200 -
+2025-07-22 23:16:36 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:36] "GET /static/img/produk/brownsugarvanillalagoan.png HTTP/1.1" 200 -
+2025-07-22 23:16:37 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:37] "GET /static/img/produk/estehjumbo.png HTTP/1.1" 200 -
+2025-07-22 23:16:37 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:37] "GET /static/img/produk/alpukat.png HTTP/1.1" 200 -
+2025-07-22 23:16:37 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:37] "GET /static/img/produk/estehjumbojeruknipis.png HTTP/1.1" 200 -
+2025-07-22 23:16:37 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:37] "GET /static/img/produk/blodyvelvet.png HTTP/1.1" 200 -
+2025-07-22 23:16:37 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:37] "GET /static/img/produk/blewah.png HTTP/1.1" 200 -
+2025-07-22 23:16:37 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:37] "GET /static/img/produk/blueberry.png HTTP/1.1" 200 -
+2025-07-22 23:16:37 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:37] "GET /static/img/produk/cococlassic.png HTTP/1.1" 200 -
+2025-07-22 23:16:37 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:37] "GET /static/img/produk/cocohalloween.png HTTP/1.1" 200 -
+2025-07-22 23:16:37 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:37] "GET /static/img/produk/cocokulaku.png HTTP/1.1" 200 -
+2025-07-22 23:16:37 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:37] "GET /static/img/produk/cocolumer.png HTTP/1.1" 200 -
+2025-07-22 23:16:37 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:37] "GET /static/img/produk/cocomaltino.png HTTP/1.1" 200 -
+2025-07-22 23:16:37 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:37] "GET /static/img/produk/cocoredflorest.png HTTP/1.1" 200 -
+2025-07-22 23:16:37 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:37] "GET /static/img/produk/cocorockytiramisu.png HTTP/1.1" 200 -
+2025-07-22 23:16:37 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:37] "GET /static/img/produk/cocotrouble.png HTTP/1.1" 200 -
+2025-07-22 23:16:37 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:37] "GET /static/img/produk/coconutarencoffe.png HTTP/1.1" 200 -
+2025-07-22 23:16:37 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:37] "GET /static/img/produk/coffepandan.png HTTP/1.1" 200 -
+2025-07-22 23:16:37 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:37] "GET /static/img/produk/coffealagoklat.png HTTP/1.1" 200 -
+2025-07-22 23:16:37 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:37] "GET /static/img/produk/coffetiramisu.png HTTP/1.1" 200 -
+2025-07-22 23:16:38 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:38] "GET /static/img/produk/durian.png HTTP/1.1" 200 -
+2025-07-22 23:16:38 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:38] "GET /static/img/produk/duriancoffe.png HTTP/1.1" 200 -
+2025-07-22 23:16:38 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:38] "GET /static/img/produk/goteaapple.png HTTP/1.1" 200 -
+2025-07-22 23:16:38 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:38] "GET /static/img/produk/goteablackcurrent.png HTTP/1.1" 200 -
+2025-07-22 23:16:38 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:38] "GET /static/img/produk/goteagrape.png HTTP/1.1" 200 -
+2025-07-22 23:16:38 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:38] "GET /static/img/produk/goteahoney.png HTTP/1.1" 200 -
+2025-07-22 23:16:38 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:38] "GET /static/img/produk/goteajasmine.png HTTP/1.1" 200 -
+2025-07-22 23:16:38 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:38] "GET /static/img/produk/gotealemon.png HTTP/1.1" 200 -
+2025-07-22 23:16:38 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:38] "GET /static/img/produk/gotealychee.png HTTP/1.1" 200 -
+2025-07-22 23:16:38 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:38] "GET /static/img/produk/goteamangga.png HTTP/1.1" 200 -
+2025-07-22 23:16:38 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:38] "GET /static/img/produk/goteapeach.png HTTP/1.1" 200 -
+2025-07-22 23:16:38 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:38] "GET /static/img/produk/goteaspecial.png HTTP/1.1" 200 -
+2025-07-22 23:16:38 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:38] "GET /static/img/produk/greenvelvet.png HTTP/1.1" 200 -
+2025-07-22 23:16:38 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:38] "GET /static/img/produk/lychee.png HTTP/1.1" 200 -
+2025-07-22 23:16:39 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:39] "GET /static/img/produk/mango.png HTTP/1.1" 200 -
+2025-07-22 23:16:39 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:39] "GET /static/img/produk/strawberry.png HTTP/1.1" 200 -
+2025-07-22 23:16:39 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:39] "GET /static/img/produk/nanas.png HTTP/1.1" 200 -
+2025-07-22 23:16:39 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:39] "GET /static/img/produk/violet.png HTTP/1.1" 200 -
+2025-07-22 23:16:40 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:40] "GET /penjualan HTTP/1.1" 200 -
+2025-07-22 23:16:43 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:43] "GET /produk HTTP/1.1" 200 -
+2025-07-22 23:16:43 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:43] "[36mGET /static/img/produk/estehjumbo.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:44] "[36mGET /static/img/produk/cocobanana.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:44] "[36mGET /static/img/produk/browssugardurian.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:44] "[36mGET /static/img/produk/capucinokulaku.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:44] "[36mGET /static/img/produk/brownsugartiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:44] "[36mGET /static/img/produk/brownsugarvanillalagoan.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:44] "[36mGET /static/img/produk/estehjumbojeruknipis.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:44] "[36mGET /static/img/produk/alpukat.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:44] "[36mGET /static/img/produk/blewah.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:44] "[36mGET /static/img/produk/blodyvelvet.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:44] "[36mGET /static/img/produk/blueberry.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:44] "[36mGET /static/img/produk/brownsugarklepon.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:44] "[36mGET /static/img/produk/cococlassic.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:44] "[36mGET /static/img/produk/cocohalloween.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:44] "[36mGET /static/img/produk/cocokulaku.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:44] "[36mGET /static/img/produk/cocolumer.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:44] "[36mGET /static/img/produk/cocomaltino.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:44] "[36mGET /static/img/produk/cocoredflorest.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:44] "[36mGET /static/img/produk/cocorockytiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:44] "[36mGET /static/img/produk/cocotrouble.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:44] "[36mGET /static/img/produk/coconutarencoffe.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:44] "[36mGET /static/img/produk/coffealagoklat.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:44] "[36mGET /static/img/produk/coffepandan.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:44] "[36mGET /static/img/produk/coffetiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:44] "[36mGET /static/img/produk/durian.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:45 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:45] "[36mGET /static/img/produk/duriancoffe.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:45 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:45] "[36mGET /static/img/produk/goteaapple.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:45 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:45] "[36mGET /static/img/produk/goteablackcurrent.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:45 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:45] "[36mGET /static/img/produk/goteagrape.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:45 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:45] "[36mGET /static/img/produk/goteahoney.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:45 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:45] "[36mGET /static/img/produk/goteajasmine.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:45 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:45] "[36mGET /static/img/produk/gotealychee.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:45 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:45] "[36mGET /static/img/produk/gotealemon.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:45 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:45] "[36mGET /static/img/produk/goteamangga.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:45 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:45] "[36mGET /static/img/produk/goteapeach.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:45 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:45] "[36mGET /static/img/produk/goteaspecial.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:45 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:45] "[36mGET /static/img/produk/greenvelvet.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:45 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:45] "[36mGET /static/img/produk/lychee.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:45 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:45] "[36mGET /static/img/produk/mango.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:45 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:45] "[36mGET /static/img/produk/nanas.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:45 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:45] "[36mGET /static/img/produk/strawberry.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:45 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:45] "[36mGET /static/img/produk/violet.png HTTP/1.1[0m" 304 -
+2025-07-22 23:16:50 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:50] "[32mPOST /jual-multi HTTP/1.1[0m" 302 -
+2025-07-22 23:16:50 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:50] "GET / HTTP/1.1" 200 -
+2025-07-22 23:16:50 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:50] "[33mGET /static/img/logo-placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:16:51 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:51] "GET /penjualan HTTP/1.1" 200 -
+2025-07-22 23:16:56 [INFO] 127.0.0.1 - - [22/Jul/2025 23:16:56] "[31m[1mGET /export/penjualan-ringkas-xlsx?tanggal=&mode=harian HTTP/1.1[0m" 400 -
+2025-07-22 23:17:00 [INFO] 127.0.0.1 - - [22/Jul/2025 23:17:00] "GET /penjualan?tanggal=2025-07-22&kategori=semua HTTP/1.1" 200 -
+2025-07-22 23:17:02 [INFO] 127.0.0.1 - - [22/Jul/2025 23:17:02] "GET /export/penjualan-ringkas-xlsx?tanggal=2025-07-22&mode=harian HTTP/1.1" 200 -
+2025-07-22 23:17:09 [INFO] 127.0.0.1 - - [22/Jul/2025 23:17:09] "GET / HTTP/1.1" 200 -
+2025-07-22 23:17:10 [INFO] 127.0.0.1 - - [22/Jul/2025 23:17:10] "[33mGET /static/img/logo-placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:39 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:39] "GET / HTTP/1.1" 200 -
+2025-07-22 23:58:39 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:39] "[33mGET /static/img/logo-placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:41 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:41] "GET /penjualan HTTP/1.1" 200 -
+2025-07-22 23:58:41 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:41] "GET / HTTP/1.1" 200 -
+2025-07-22 23:58:42 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:42] "[33mGET /static/img/logo-placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:42 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:42] "GET /produk HTTP/1.1" 200 -
+2025-07-22 23:58:42 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:42] "[36mGET /static/img/produk/browssugardurian.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:42 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:42] "[36mGET /static/img/produk/brownsugartiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:43 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:43] "[36mGET /static/img/produk/brownsugarvanillalagoan.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:43 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:43] "[36mGET /static/img/produk/capucinokulaku.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:43 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:43] "[36mGET /static/img/produk/brownsugarklepon.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:43 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:43] "[36mGET /static/img/produk/cocobanana.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:43 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:43] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:43 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:43] "[36mGET /static/img/produk/estehjumbo.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:43 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:43] "[36mGET /static/img/produk/estehjumbojeruknipis.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:43 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:43] "[36mGET /static/img/produk/alpukat.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:43 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:43] "[36mGET /static/img/produk/blewah.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:43 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:43] "[36mGET /static/img/produk/blodyvelvet.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:43 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:43] "[36mGET /static/img/produk/blueberry.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:43 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:43] "[36mGET /static/img/produk/cococlassic.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:43 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:43] "[36mGET /static/img/produk/cocohalloween.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:43 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:43] "[36mGET /static/img/produk/cocokulaku.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:43 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:43] "[36mGET /static/img/produk/cocolumer.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:43 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:43] "[36mGET /static/img/produk/cocomaltino.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:43 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:43] "[36mGET /static/img/produk/cocoredflorest.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:43 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:43] "[36mGET /static/img/produk/cocorockytiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:44] "[36mGET /static/img/produk/cocotrouble.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:44] "[36mGET /static/img/produk/coffealagoklat.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:44] "[36mGET /static/img/produk/coconutarencoffe.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:44] "[36mGET /static/img/produk/coffepandan.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:44] "[36mGET /static/img/produk/coffetiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:44] "[36mGET /static/img/produk/durian.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:44] "[36mGET /static/img/produk/duriancoffe.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:44] "[36mGET /static/img/produk/goteaapple.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:44] "[36mGET /static/img/produk/goteablackcurrent.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:44] "[36mGET /static/img/produk/goteagrape.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:44] "[36mGET /static/img/produk/goteahoney.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:44] "[36mGET /static/img/produk/goteajasmine.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:44] "[36mGET /static/img/produk/gotealemon.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:44] "[36mGET /static/img/produk/gotealychee.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:44] "[36mGET /static/img/produk/goteamangga.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:44] "[36mGET /static/img/produk/goteapeach.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:44] "[36mGET /static/img/produk/goteaspecial.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:44 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:44] "[36mGET /static/img/produk/greenvelvet.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:45 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:45] "[36mGET /static/img/produk/lychee.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:45 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:45] "[36mGET /static/img/produk/mango.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:45 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:45] "[36mGET /static/img/produk/nanas.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:45 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:45] "[36mGET /static/img/produk/strawberry.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:45 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:45] "[36mGET /static/img/produk/violet.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:45 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:45] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:45 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:45] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:45 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:45] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:45 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:45] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:46 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:46] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:46 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:46] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:46 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:46] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:46 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:46] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:46 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:46] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:46 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:46] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:47 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:47] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:47 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:47] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:47 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:47] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:47 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:47] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:47 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:47] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:47 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:47] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:48 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:48] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:48 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:48] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:48 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:48] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:48 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:48] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:48 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:48] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:48 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:48] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:48 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:48] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:49 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:49] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:49 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:49] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:49 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:49] "[32mPOST /jual-multi HTTP/1.1[0m" 302 -
+2025-07-22 23:58:49 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:49] "GET / HTTP/1.1" 200 -
+2025-07-22 23:58:49 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:49] "[33mGET /static/img/logo-placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:49 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:49] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:56 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:56] "GET /penjualan HTTP/1.1" 200 -
+2025-07-22 23:58:56 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:56] "GET / HTTP/1.1" 200 -
+2025-07-22 23:58:57 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:57] "[33mGET /static/img/logo-placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:58:57 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:57] "GET /produk HTTP/1.1" 200 -
+2025-07-22 23:58:57 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:57] "[36mGET /static/img/produk/estehjumbo.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:58 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:58] "[36mGET /static/img/produk/brownsugartiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:58 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:58] "[36mGET /static/img/produk/violet.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:58 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:58] "[36mGET /static/img/produk/browssugardurian.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:58 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:58] "[36mGET /static/img/produk/brownsugarvanillalagoan.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:58 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:58] "[36mGET /static/img/produk/strawberry.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:58 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:58] "[36mGET /static/img/produk/capucinokulaku.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:58 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:58] "[36mGET /static/img/produk/brownsugarklepon.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:58 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:58] "[36mGET /static/img/produk/cocobanana.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:58 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:58] "[36mGET /static/img/produk/estehjumbojeruknipis.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:58 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:58] "[36mGET /static/img/produk/alpukat.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:58 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:58] "[36mGET /static/img/produk/blewah.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:58 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:58] "[36mGET /static/img/produk/blodyvelvet.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:58 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:58] "[36mGET /static/img/produk/blueberry.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:58 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:58] "[36mGET /static/img/produk/cococlassic.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:58 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:58] "[36mGET /static/img/produk/cocohalloween.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:58 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:58] "[36mGET /static/img/produk/cocokulaku.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:58 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:58] "[36mGET /static/img/produk/cocolumer.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:58 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:58] "[36mGET /static/img/produk/cocomaltino.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:58 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:58] "[36mGET /static/img/produk/cocoredflorest.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:59 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:59] "[36mGET /static/img/produk/cocorockytiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:59 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:59] "[36mGET /static/img/produk/cocotrouble.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:59 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:59] "[36mGET /static/img/produk/coconutarencoffe.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:59 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:59] "[36mGET /static/img/produk/coffealagoklat.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:59 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:59] "[36mGET /static/img/produk/coffepandan.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:59 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:59] "[36mGET /static/img/produk/coffetiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:59 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:59] "[36mGET /static/img/produk/durian.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:59 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:59] "[36mGET /static/img/produk/duriancoffe.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:59 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:59] "[36mGET /static/img/produk/goteaapple.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:59 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:59] "[36mGET /static/img/produk/goteablackcurrent.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:59 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:59] "[36mGET /static/img/produk/goteagrape.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:59 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:59] "[36mGET /static/img/produk/goteahoney.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:59 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:59] "[36mGET /static/img/produk/goteajasmine.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:59 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:59] "[36mGET /static/img/produk/gotealemon.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:59 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:59] "[36mGET /static/img/produk/goteamangga.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:59 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:59] "[36mGET /static/img/produk/gotealychee.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:59 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:59] "[36mGET /static/img/produk/goteapeach.png HTTP/1.1[0m" 304 -
+2025-07-22 23:58:59 [INFO] 127.0.0.1 - - [22/Jul/2025 23:58:59] "GET /produk HTTP/1.1" 200 -
+2025-07-22 23:59:00 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:00] "[36mGET /static/img/produk/brownsugartiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:00 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:00] "[36mGET /static/img/produk/violet.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:00 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:00] "[36mGET /static/img/produk/browssugardurian.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:00 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:00] "[36mGET /static/img/produk/brownsugarvanillalagoan.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:00 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:00] "[36mGET /static/img/produk/capucinokulaku.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:00 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:00] "[36mGET /static/img/produk/brownsugarklepon.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:00 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:00] "[36mGET /static/img/produk/cocobanana.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:00 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:00] "[36mGET /static/img/produk/strawberry.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:00 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:00] "[36mGET /static/img/produk/estehjumbo.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:00 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:00] "[36mGET /static/img/produk/estehjumbojeruknipis.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:00 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:00] "[36mGET /static/img/produk/alpukat.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:00 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:00] "[36mGET /static/img/produk/blewah.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:00 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:00] "[36mGET /static/img/produk/blodyvelvet.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:00 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:00] "[36mGET /static/img/produk/blueberry.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:00 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:00] "[36mGET /static/img/produk/cococlassic.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:00 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:00] "[36mGET /static/img/produk/cocohalloween.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:00 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:00] "[36mGET /static/img/produk/cocokulaku.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:00 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:00] "[36mGET /static/img/produk/cocolumer.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:01 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:01] "[36mGET /static/img/produk/cocomaltino.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:01 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:01] "[36mGET /static/img/produk/cocoredflorest.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:01 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:01] "[36mGET /static/img/produk/cocorockytiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:01 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:01] "[36mGET /static/img/produk/cocotrouble.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:01 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:01] "[36mGET /static/img/produk/coconutarencoffe.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:01 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:01] "[36mGET /static/img/produk/coffealagoklat.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:01 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:01] "[36mGET /static/img/produk/coffepandan.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:01 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:01] "[36mGET /static/img/produk/coffetiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:01 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:01] "[36mGET /static/img/produk/durian.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:01 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:01] "[36mGET /static/img/produk/duriancoffe.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:01 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:01] "[36mGET /static/img/produk/goteaapple.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:01 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:01] "[36mGET /static/img/produk/goteablackcurrent.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:01 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:01] "[36mGET /static/img/produk/goteagrape.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:01 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:01] "[36mGET /static/img/produk/goteahoney.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:01 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:01] "[36mGET /static/img/produk/goteajasmine.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:01 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:01] "[36mGET /static/img/produk/gotealemon.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:01 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:01] "[36mGET /static/img/produk/gotealychee.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:01 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:01] "[36mGET /static/img/produk/goteamangga.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:02 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:02] "[36mGET /static/img/produk/goteapeach.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:02 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:02] "GET /static/img/produk/goteaspecial.png HTTP/1.1" 200 -
+2025-07-22 23:59:02 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:02] "GET /static/img/produk/greenvelvet.png HTTP/1.1" 200 -
+2025-07-22 23:59:02 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:02] "GET /static/img/produk/lychee.png HTTP/1.1" 200 -
+2025-07-22 23:59:02 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:02] "GET /static/img/produk/mango.png HTTP/1.1" 200 -
+2025-07-22 23:59:02 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:02] "GET /static/img/produk/nanas.png HTTP/1.1" 200 -
+2025-07-22 23:59:02 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:02] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:59:02 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:02] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:59:02 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:02] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:59:02 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:02] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:59:03 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:03] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:59:03 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:03] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:59:03 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:03] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:59:03 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:03] "[33mGET /static/img/placeholder.png HTTP/1.1[0m" 404 -
+2025-07-22 23:59:03 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:03] "GET /produk HTTP/1.1" 200 -
+2025-07-22 23:59:03 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:03] "[36mGET /static/img/produk/estehjumbo.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:03 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:03] "[36mGET /static/img/produk/strawberry.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:04 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:04] "[36mGET /static/img/produk/violet.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:04 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:04] "[36mGET /static/img/produk/brownsugartiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:04 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:04] "[36mGET /static/img/produk/brownsugarvanillalagoan.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:04 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:04] "[36mGET /static/img/produk/capucinokulaku.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:04 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:04] "[36mGET /static/img/produk/brownsugarklepon.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:04 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:04] "[36mGET /static/img/produk/browssugardurian.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:04 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:04] "[36mGET /static/img/produk/cocobanana.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:04 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:04] "[36mGET /static/img/produk/estehjumbojeruknipis.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:04 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:04] "[36mGET /static/img/produk/alpukat.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:04 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:04] "[36mGET /static/img/produk/blewah.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:04 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:04] "[36mGET /static/img/produk/blodyvelvet.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:04 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:04] "[36mGET /static/img/produk/blueberry.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:04 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:04] "[36mGET /static/img/produk/cococlassic.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:04 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:04] "[36mGET /static/img/produk/cocohalloween.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:04 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:04] "[36mGET /static/img/produk/cocokulaku.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:04 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:04] "[36mGET /static/img/produk/cocomaltino.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:04 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:04] "[36mGET /static/img/produk/cocolumer.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:04 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:04] "[36mGET /static/img/produk/cocoredflorest.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:05 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:05] "[36mGET /static/img/produk/cocotrouble.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:05 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:05] "[36mGET /static/img/produk/cocorockytiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:05 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:05] "[36mGET /static/img/produk/coconutarencoffe.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:05 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:05] "[36mGET /static/img/produk/coffealagoklat.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:05 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:05] "[36mGET /static/img/produk/coffepandan.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:05 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:05] "[36mGET /static/img/produk/coffetiramisu.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:05 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:05] "[36mGET /static/img/produk/durian.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:05 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:05] "[36mGET /static/img/produk/duriancoffe.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:05 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:05] "GET / HTTP/1.1" 200 -
+2025-07-22 23:59:05 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:05] "[36mGET /static/img/produk/goteaapple.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:05 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:05] "[36mGET /static/img/produk/goteablackcurrent.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:05 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:05] "[36mGET /static/img/produk/goteagrape.png HTTP/1.1[0m" 304 -
+2025-07-22 23:59:05 [INFO] 127.0.0.1 - - [22/Jul/2025 23:59:05] "[33mGET /static/img/logo-placeholder.png HTTP/1.1[0m" 404 -

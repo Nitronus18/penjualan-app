@@ -1,0 +1,208 @@
+{% extends "base.html" %}
+{% block title %}{{ kategori }} Series{% endblock %}
+
+{% block content %}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    background-color: #F6F2ED;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+  }
+  h4, h5, h6 { font-weight: 700; }
+  .btn-primary-custom {
+    background-color: #4B2C20;
+    color: white;
+    border: none;
+    border-radius: 999px;
+    font-weight: 500;
+  }
+  .btn-primary-custom:hover { background-color: #3a2118; }
+  .quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 999px;
+    overflow: hidden;
+    width: 110px;
+    margin: 0 auto 1rem;
+    background-color: white;
+  }
+  .quantity-control button {
+    background: none;
+    border: none;
+    color: #A67C52;
+    font-size: 1.2rem;
+    width: 32px;
+    height: 32px;
+    line-height: 1;
+  }
+  .quantity-control input {
+    width: 36px;
+    text-align: center;
+    border: none;
+    outline: none;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #272727;
+  }
+</style>
+
+<div class="d-flex justify-content-end mb-3">
+  <button class="btn btn-outline-dark position-relative" data-bs-toggle="modal" data-bs-target="#keranjangModal">
+    🧺 Keranjang
+    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="keranjang-count" style="font-size: 0.7rem;">0</span>
+  </button>
+</div>
+
+<div class="mb-4">
+  <h4>Selamat datang 👋</h4>
+  <p class="text-muted">Silakan pilih minuman favoritmu 🍹</p>
+</div>
+
+<form method="GET" class="row g-2 align-items-end mb-4">
+  <div class="col-auto">
+    <input type="text" name="q" class="form-control form-control-sm" placeholder="Cari produk..." value="{{ query or '' }}">
+  </div>
+  <div class="col-auto">
+    <select name="stok" class="form-select form-select-sm" onchange="this.form.submit()">
+      <option value="semua" {% if stok_filter == 'semua' %}selected{% endif %}>Semua</option>
+      <option value="tersedia" {% if stok_filter == 'tersedia' %}selected{% endif %}>Tersedia</option>
+      <option value="habis" {% if stok_filter == 'habis' %}selected{% endif %}>Stok Habis</option>
+    </select>
+  </div>
+  <div class="col-auto">
+    <button class="btn btn-sm btn-outline-primary">🔍 Cari</button>
+  </div>
+</form>
+
+<div class="row row-cols-2 row-cols-md-4 g-3">
+  {% for p in produk %}
+  <div class="col text-center">
+    <div class="card border-0 shadow-sm p-3 rounded-4 h-100">
+      {% set nama_file = p.nama|lower|replace(" ", "")|replace("_", "") ~ ".png" %}
+      <img src="{{ url_for('static', filename='img/produk/' ~ nama_file) }}"
+           onerror="this.src='{{ url_for('static', filename='img/placeholder.png') }}';"
+           class="img-fluid rounded mb-2" alt="{{ p.nama }}">
+      <h6 class="mb-1">{{ p.nama }}</h6>
+      <p class="mb-1 text-muted">{{ p.harga|rupiah }}</p>
+      <p class="mb-2">Stok:
+        {% if p.stok == 0 %}
+          <span class="badge bg-secondary">Habis</span>
+        {% elif p.stok < 10 %}
+          <span class="badge bg-danger">{{ p.stok }}</span>
+        {% else %}
+          <span class="badge bg-success">{{ p.stok }}</span>
+        {% endif %}
+      </p>
+      <div class="quantity-control mb-2">
+        <button type="button" onclick="updateQty({{ p.id }}, -1)">−</button>
+        <input type="number" id="qty-{{ p.id }}" value="0" min="0">
+        <button type="button" onclick="updateQty({{ p.id }}, 1)">+</button>
+      </div>
+      <button type="button" class="btn btn-primary-custom w-100" onclick='tambahKeranjang({{ p.id }}, {{ p.nama|tojson }})'>Tambah</button>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="modal fade" id="keranjangModal" tabindex="-1" aria-labelledby="keranjangModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content rounded-4">
+      <div class="modal-header">
+        <h5 class="modal-title" id="keranjangModalLabel">🧺 Daftar Penjualan</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+      </div>
+      <form action="/jual-multi" method="POST" onsubmit="return kirimKeranjang()">
+        <div class="modal-body">
+          <ul class="list-group mb-3" id="keranjang-list"></ul>
+          <input type="hidden" name="items" id="items-data">
+          <button type="button" class="btn btn-outline-danger w-100 mb-2" onclick="hapusKeranjang()">🗑️ Kosongkan Keranjang</button>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-success w-100">✅ Simpan Transaksi</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+let keranjang = [];
+
+window.addEventListener('DOMContentLoaded', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get("transaksi") === "ok") {
+    localStorage.removeItem("keranjang");
+    keranjang = [];
+  } else {
+    const saved = localStorage.getItem("keranjang");
+    if (saved) {
+      try { keranjang = JSON.parse(saved); } catch {}
+    }
+  }
+  renderKeranjang();
+});
+
+function saveKeranjang() {
+  localStorage.setItem("keranjang", JSON.stringify(keranjang));
+}
+
+function updateQty(id, delta) {
+  const input = document.getElementById("qty-" + id);
+  let val = parseInt(input.value) || 0;
+  val = Math.max(0, val + delta);
+  input.value = val;
+}
+
+function tambahKeranjang(id, nama) {
+  const qtyInput = document.getElementById("qty-" + id);
+  const qty = parseInt(qtyInput.value);
+  if (qty > 0) {
+    const index = keranjang.findIndex(i => i.id === id);
+    if (index !== -1) {
+      keranjang[index].jumlah += qty;
+    } else {
+      keranjang.push({ id, nama, jumlah: qty });
+    }
+    saveKeranjang();
+    renderKeranjang();
+    qtyInput.value = 0;
+  }
+}
+
+function renderKeranjang() {
+  const list = document.getElementById("keranjang-list");
+  const badge = document.getElementById("keranjang-count");
+  list.innerHTML = "";
+  let total = 0;
+
+  keranjang.forEach((item, i) => {
+    const li = document.createElement("li");
+    li.className = "list-group-item d-flex justify-content-between align-items-center";
+    li.innerHTML = `${item.nama} <span class="badge bg-primary">${item.jumlah}</span>`;
+    list.appendChild(li);
+    total += item.jumlah;
+  });
+
+  badge.textContent = total;
+  badge.style.display = total > 0 ? "inline-block" : "none";
+}
+
+function kirimKeranjang() {
+  const hidden = document.getElementById("items-data");
+  hidden.value = keranjang.map(i => i.id + ":" + i.jumlah).join(",");
+  return hidden.value.length > 0;
+}
+
+function hapusKeranjang() {
+  if (confirm("Yakin ingin mengosongkan keranjang?")) {
+    keranjang = [];
+    saveKeranjang();
+    renderKeranjang();
+  }
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+{% endblock %}

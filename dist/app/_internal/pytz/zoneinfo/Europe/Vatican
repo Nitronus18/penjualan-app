@@ -1,0 +1,56 @@
+rray().optional(),
+    urlFilter: zod__WEBPACK_IMPORTED_MODULE_3__.z.string().optional(),
+});
+var DeclarativeRuleValidator = zod__WEBPACK_IMPORTED_MODULE_3__.z.strictObject({
+    action: RuleActionValidator,
+    condition: RuleConditionValidator,
+    id: zod__WEBPACK_IMPORTED_MODULE_3__.z.number(),
+    priority: zod__WEBPACK_IMPORTED_MODULE_3__.z.number().optional(),
+});
+var DECLARATIVE_RESOURCE_TYPES_MAP = (_b = {},
+    _b[ResourceType.MainFrame] = RequestType$1.Document,
+    _b[ResourceType.SubFrame] = RequestType$1.SubDocument,
+    _b[ResourceType.Stylesheet] = RequestType$1.Stylesheet,
+    _b[ResourceType.Script] = RequestType$1.Script,
+    _b[ResourceType.Image] = RequestType$1.Image,
+    _b[ResourceType.Font] = RequestType$1.Font,
+    _b[ResourceType.Object] = RequestType$1.Object,
+    _b[ResourceType.XmlHttpRequest] = RequestType$1.XmlHttpRequest,
+    _b[ResourceType.Ping] = RequestType$1.Ping,
+    _b[ResourceType.Media] = RequestType$1.Media,
+    _b[ResourceType.WebSocket] = RequestType$1.WebSocket,
+    _b[ResourceType.Other] = RequestType$1.Other,
+    _b);
+var UnavailableRuleSetSourceError =  (function (_super) {
+    __extends(UnavailableRuleSetSourceError, _super);
+    function UnavailableRuleSetSourceError(message, ruleSetId, cause) {
+        var _this = _super.call(this, message, { cause: cause }) || this;
+        _this.name = 'UnavailableRuleSetSourceError';
+        _this.ruleSetId = ruleSetId;
+        Object.setPrototypeOf(_this, UnavailableRuleSetSourceError.prototype);
+        return _this;
+    }
+    return UnavailableRuleSetSourceError;
+}(Error));
+var SourceMap =  (function () {
+    function SourceMap(sources) {
+        var _this = this;
+        this.sources = [];
+        this.ruleIdMap = new Map();
+        this.declarativeIdMap = new Map();
+        this.sources = sources;
+        this.sources.forEach(function (item) {
+            var sourceRuleIndex = item.sourceRuleIndex, filterId = item.filterId, declarativeRuleId = item.declarativeRuleId;
+            var existingSourcePairs = _this.ruleIdMap.get(declarativeRuleId);
+            var value = {
+                sourceRuleIndex: sourceRuleIndex,
+                filterId: filterId,
+            };
+            var newSourceValue = existingSourcePairs
+                ? existingSourcePairs.concat(value)
+                : [value];
+            _this.ruleIdMap.set(declarativeRuleId, newSourceValue);
+            var key = SourceMap.getKeyFromSource(value);
+            var existingDeclarativeIdsPairs = _this.declarativeIdMap.get(key);
+            var newDeclarativeIdsValue = existingDeclarativeIdsPairs
+                ? existingDeclarative
